@@ -10,11 +10,16 @@ public class GameScore : MonoBehaviour
     private float team2Score;
 
     [Header("UI Elements")]
-    [SerializeField] private TextMeshPro scoreText1;
-    [SerializeField] private TextMeshPro scoreText2;
+    [SerializeField] private TextMeshProUGUI scoreText1;
+    [SerializeField] private TextMeshProUGUI scoreText2;
     public enum TeamNumber
     {
         Team1, Team2
+    }
+
+    private void Update()
+    {
+        DisplayScore();
     }
 
     public void AddScore(TeamNumber teamNumber, float amount)
@@ -32,7 +37,8 @@ public class GameScore : MonoBehaviour
 
     private void DisplayScore()
     {
-        
+        scoreText1.text = team1Score.ToString("F0");
+        scoreText2.text = team2Score.ToString("F0");
     }
 
     

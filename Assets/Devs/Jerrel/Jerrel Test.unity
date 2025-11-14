@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 217, y: -100}
+  m_AnchoredPosition: {x: 1700, y: -100}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205285645
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Team 1 :'
+  m_text: ': Team 2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46e2a4dbb97450c4b8d9c63bbbe87d98, type: 2}
   m_sharedMaterial: {fileID: -1066006889408486923, guid: 46e2a4dbb97450c4b8d9c63bbbe87d98, type: 2}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 225151483}
   - component: {fileID: 225151482}
   m_Layer: 5
-  m_Name: TeamScore1
+  m_Name: TeamScore2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 0}
+  m_AnchoredPosition: {x: -300, y: 0}
   m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225151482
@@ -436,8 +436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af84cc0285f9625469944c33c933750c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText1: {fileID: 0}
-  scoreText2: {fileID: 0}
+  scoreText1: {fileID: 839723222}
+  scoreText2: {fileID: 225151482}
 --- !u!1 &402146904
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 217, y: -100}
+  m_AnchoredPosition: {x: 200, y: -100}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622844459
