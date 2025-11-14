@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class GameScore : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class GameScore : MonoBehaviour
                 team1Score += amount;
                 break;
             case TeamNumber.Team2:
-                team2Score += amount; 
+                team2Score += amount;
                 break;
         }
     }
@@ -41,5 +41,5 @@ public class GameScore : MonoBehaviour
         scoreText2.text = team2Score.ToString("F0");
     }
 
-    
+
 }

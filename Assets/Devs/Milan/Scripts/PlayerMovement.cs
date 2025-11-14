@@ -9,8 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     private Rigidbody rb;
     private float moveDirection;
+    private PlayerState playerStateScript;
     void Start()
     {
+        playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -18,22 +20,24 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector3(moveDirection, rb.linearVelocity.y, 0);
+        Debug.Log(gameObject.name + " " + moveDirection);
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
+
         moveDirection = context.ReadValue<Vector2>().x;
         moveDirection *= speed;
 
-        if (PlayerState.Instance.currentState == PlayerState.playerState.Hanging)
+        if (playerStateScript.currentState == PlayerState.playerState.Hanging)
             return;
         if (moveDirection != 0)
         {
-            PlayerState.Instance.currentState = PlayerState.playerState.Running;
+            playerStateScript.currentState = PlayerState.playerState.Idle;
         }
         else
         {
-            PlayerState.Instance.currentState = PlayerState.playerState.Idle;
+            playerStateScript.currentState = PlayerState.playerState.Idle;
         }
 
     }

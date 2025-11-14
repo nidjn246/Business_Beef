@@ -12,6 +12,6 @@ public class DebugState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stateText.text = "State: " + PlayerState.Instance.currentState.ToString();
+        //stateText.text = "State: " + PlayerState.Instance.currentState.ToString();
     }
 }

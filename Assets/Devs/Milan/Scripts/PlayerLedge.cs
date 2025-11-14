@@ -7,8 +7,10 @@ public class PlayerLedge : MonoBehaviour
     [SerializeField] private bool goLerp = false;
     [SerializeField] private Vector3 target;
     [SerializeField] float lerpSpeed = 0.5f;
+    private PlayerState playerStateScript;
     void Start()
     {
+        playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -45,7 +47,7 @@ public class PlayerLedge : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ledge"))
         {
-            PlayerState.Instance.currentState = PlayerState.playerState.Hanging;
+            playerStateScript.currentState = PlayerState.playerState.Hanging;
             GoHang(other);
         }
     }
@@ -59,10 +61,10 @@ public class PlayerLedge : MonoBehaviour
     }
     public void Hoist()
     {
-        if (PlayerState.Instance.currentState != PlayerState.playerState.Hanging)
+        if (playerStateScript.currentState != PlayerState.playerState.Hanging)
             return;
         StopHang();
         rb.AddForce(Vector3.up * hoistHeight, ForceMode.Impulse);
-        PlayerState.Instance.currentState = PlayerState.playerState.Idle;
+        playerStateScript.currentState = PlayerState.playerState.Idle;
     }
 }

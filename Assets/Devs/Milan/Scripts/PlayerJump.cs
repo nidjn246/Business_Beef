@@ -6,8 +6,10 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody rb;
     private bool grounded = true;
     [SerializeField] private float jumpHeight = 5f;
+    private PlayerState playerStateScript;
     void Start()
     {
+        playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -19,10 +21,11 @@ public class PlayerJump : MonoBehaviour
         if (grounded)
         {
             rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
-            PlayerState.Instance.currentState = PlayerState.playerState.Jumping;
+            playerStateScript.currentState = PlayerState.playerState.Jumping;
             grounded = false;
         }
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -30,7 +33,7 @@ public class PlayerJump : MonoBehaviour
         Vector3 normal = contact.normal;
         if (Vector3.Dot(normal, Vector3.up) > 0.5f)
         {
-            PlayerState.Instance.currentState = PlayerState.playerState.Idle;
+            playerStateScript.currentState = PlayerState.playerState.Idle;
             grounded = true;
         }
 

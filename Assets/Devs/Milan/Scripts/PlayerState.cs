@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    public static PlayerState Instance;
+
     public enum playerState
     {
         Idle,
@@ -13,10 +13,7 @@ public class PlayerState : MonoBehaviour
 
     public playerState currentState;
 
-    void Awake()
-    {
-        Instance = this;
-    }
+
 
     void Update()
     {
