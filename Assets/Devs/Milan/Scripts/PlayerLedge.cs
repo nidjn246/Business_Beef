@@ -8,7 +8,7 @@ public class PlayerLedge : MonoBehaviour
     [SerializeField] private Vector3 target;
     [SerializeField] float lerpSpeed = 0.5f;
     private PlayerState playerStateScript;
-    void Start()
+    void Awake()
     {
         playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();

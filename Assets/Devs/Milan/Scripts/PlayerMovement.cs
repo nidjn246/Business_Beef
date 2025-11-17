@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector3(moveDirection, rb.linearVelocity.y, 0);
-        Debug.Log(gameObject.name + " " + moveDirection);
     }
 
     public void OnMove(InputAction.CallbackContext context)
