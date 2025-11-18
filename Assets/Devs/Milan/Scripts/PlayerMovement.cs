@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float moveDirection;
     private PlayerState playerStateScript;
-    void Start()
+    void Awake()
     {
         playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         if (moveDirection != 0)
         {
-            playerStateScript.currentState = PlayerState.playerState.Idle;
+            playerStateScript.currentState = PlayerState.playerState.Running;
         }
         else
         {

@@ -22,6 +22,8 @@ public class TeamManager : MonoBehaviour
 
     private void Update()
     {
+        if (startCanvas == null) return;
+
         if (blueTeamMembers.Count == 1 && orangeTeamMembers.Count == 1)
         {
             startCanvas.SetActive(true);

@@ -5,9 +5,15 @@ using UnityEngine.InputSystem;
 public class PlayerJoin : MonoBehaviour
 {
     [SerializeField] private CinemachineTargetGroup targetGroup;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(targetGroup.gameObject);
+    }
     public void OnJoin(PlayerInput playerInput)
     {
-
+        DontDestroyOnLoad(playerInput.gameObject);
         switch (playerInput.playerIndex)
         {
             case 0:

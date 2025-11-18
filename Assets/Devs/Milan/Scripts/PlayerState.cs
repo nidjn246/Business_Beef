@@ -15,8 +15,5 @@ public class PlayerState : MonoBehaviour
 
 
 
-    void Update()
-    {
 
-    }
 }
