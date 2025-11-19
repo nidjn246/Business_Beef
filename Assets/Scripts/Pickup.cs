@@ -20,7 +20,7 @@ public class Pickup : MonoBehaviour
        
         if (gamepadDir.sqrMagnitude > 0.1f)
         {
-            aimDir = new Vector3(gamepadDir.x, 0, gamepadDir.y).normalized;
+            aimDir = new Vector3(gamepadDir.x, gamepadDir.y, 0).normalized;
         }
     }
 
@@ -48,20 +48,6 @@ public class Pickup : MonoBehaviour
         if (!context.performed) return;
         gamepadDir = context.ReadValue<Vector2>().normalized;
         
-    }
-
-    public void OnAimMouse(InputAction.CallbackContext context)
-    {
-        if (!context.performed) return;
-
-        Vector2 mousePos = context.ReadValue<Vector2>();
-
-        Vector3 world = Camera.main.ScreenToWorldPoint(
-            new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane)
-        );
-
-        aimDir = (world - transform.position).normalized;
-        aimDir.z = 0;
     }
 
     private void TryPickup()
@@ -112,16 +98,22 @@ public class Pickup : MonoBehaviour
 
         isHolding = false;
         heldObject.transform.parent = null;
-
         heldRb.isKinematic = false;
 
-        // FIX: Re-enable collider when throwing
+        // Re-enable collider so physics works when thrown
         heldCollider.enabled = true;
 
-        Physics.IgnoreCollision(heldCollider, gameObject.GetComponent<Collider>());
+        // Ignore ALL player colliders
+        Collider[] playerColliders = GetComponentsInChildren<Collider>();
+        foreach (Collider col in playerColliders)
+        {
+            Physics.IgnoreCollision(heldCollider, col, true);
+        }
 
+        // Throw force
         heldRb.AddForce(aimDir * throwForce, ForceMode.Impulse);
     }
+
 
 
 
