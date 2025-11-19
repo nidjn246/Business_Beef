@@ -34,10 +34,5 @@ public class PlayerMovement : MonoBehaviour
         {
             playerStateScript.currentState = PlayerState.playerState.Running;
         }
-        else
-        {
-            playerStateScript.currentState = PlayerState.playerState.Idle;
-        }
-
     }
 }

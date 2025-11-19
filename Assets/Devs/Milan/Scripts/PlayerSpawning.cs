@@ -12,8 +12,8 @@ public class PlayerSpawning : MonoBehaviour
 
     public IEnumerator CoroutineAction()
     {
-        // do some actions here   
-        yield return new WaitForEndOfFrame(); // wait for 5 frames
+
+        yield return new WaitForEndOfFrame();
         for (int i = 0; i < TeamManager.instance.blueTeamMembers.Count; i++)
         {
 
@@ -25,6 +25,6 @@ public class PlayerSpawning : MonoBehaviour
             TeamManager.instance.orangeTeamMembers[i].transform.position = spawns[i + 2].transform.position;
 
 
-        }                                 // do some actions after 5 frames
+        }
     }
 }
