@@ -538,6 +538,7 @@ MonoBehaviour:
   teamName: blue
   teamMaterial: {fileID: 2100000, guid: 6cba7c78280e7df4bb5e3f23bf994dcd, type: 2}
   defaultMaterial: {fileID: 2100000, guid: e8a7f55d4e34163459cec9cc2f9ab234, type: 2}
+  isThereBoss: 0
 --- !u!65 &366228336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -688,6 +689,7 @@ MonoBehaviour:
   teamName: orange
   teamMaterial: {fileID: 2100000, guid: aa55eb09223fe1a4b8317ac10e68525d, type: 2}
   defaultMaterial: {fileID: 2100000, guid: e8a7f55d4e34163459cec9cc2f9ab234, type: 2}
+  isThereBoss: 0
 --- !u!65 &396495458
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -57,16 +57,19 @@ public class AudioManager : MonoBehaviour
 
     public static void PlaySound(SoundType sound, bool doPitchShift = true, float volume = 1)
     {
+        if (instance == null || instance.audioSource == null) return;
+
         AudioClip[] clips = instance.soundList[(int)sound].Sounds;
+        if (clips == null || clips.Length == 0) return;
+
         AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
 
         if (doPitchShift)
-        {
-            float randomPitch = UnityEngine.Random.Range(0.9f, 1.1f);
-            instance.audioSource.pitch = randomPitch;
-        }
+            instance.audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+
         instance.audioSource.PlayOneShot(randomClip, volume);
     }
+
 
     [Serializable]
     public struct SoundList
