@@ -34,46 +34,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pickup",
+                    "name": "Push",
                     "type": "Button",
-                    "id": "2e551d79-940d-4a8c-99e7-21fb18300c4e",
+                    "id": "aa0dce7b-7e25-4852-ad64-4fd61da32e55",
                     "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Drop",
-                    "type": "Button",
-                    "id": "9d6e49b3-ac18-489d-bbdc-70936a3297d8",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Throw",
-                    "type": "Button",
-                    "id": "62297d5f-2f48-4c70-b6c0-3c4e95e51ebe",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Aim",
-                    "type": "PassThrough",
-                    "id": "1d3b36e8-39d3-4d79-8027-ae41e7663e50",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "AimMouse",
-                    "type": "PassThrough",
-                    "id": "0849370c-c9c2-43fe-a36a-a480c881ea70",
-                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -192,89 +156,23 @@
                 },
                 {
                     "name": "",
-                    "id": "360ad923-dda8-4053-94f4-6c1b56167108",
+                    "id": "61b12a13-93cc-494e-87c1-8ffb35b60c77",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Pickup",
+                    "groups": "",
+                    "action": "Push",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "a40c39f4-9a15-436e-a364-ff80065805b2",
+                    "id": "232d544e-7ecb-4495-a946-3d53a3673542",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Pickup",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "61604fed-1a67-4a53-8e3c-4e67ea783baa",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Drop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "00f2b01d-0521-4b6f-9291-3be982876db9",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Drop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e3cad279-674f-43e8-9334-c65163db5798",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Throw",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0d71789d-ab65-4166-99a5-5ad3c0764ce9",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Throw",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "65efc12c-3a92-4b3b-b92f-ceb83c56085d",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3860d64e-2ac7-460b-a206-6562ce28ec7d",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "AimMouse",
+                    "groups": "",
+                    "action": "Push",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

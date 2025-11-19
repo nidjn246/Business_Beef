@@ -349,7 +349,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 88
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &6732060607222607360
 MonoBehaviour:
@@ -465,85 +465,9 @@ MonoBehaviour:
     m_ActionId: 1b82d1df-0f1a-413e-9473-2c9f9be36861
     m_ActionName: 'Player/Hoist[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6438839814661461574}
-        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
-        m_MethodName: OnPickup
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2e551d79-940d-4a8c-99e7-21fb18300c4e
-    m_ActionName: 'Player/Pickup[/Keyboard/e]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6438839814661461574}
-        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
-        m_MethodName: OnDrop
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9d6e49b3-ac18-489d-bbdc-70936a3297d8
-    m_ActionName: 'Player/Drop[/Keyboard/q]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6438839814661461574}
-        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
-        m_MethodName: OnThrow
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 62297d5f-2f48-4c70-b6c0-3c4e95e51ebe
-    m_ActionName: Player/Throw
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6438839814661461574}
-        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
-        m_MethodName: OnAim
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1d3b36e8-39d3-4d79-8027-ae41e7663e50
-    m_ActionName: 'Player/Aim[/Mouse/position]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6438839814661461574}
-        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
-        m_MethodName: OnAimMouse
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 0849370c-c9c2-43fe-a36a-a480c881ea70
-    m_ActionName: 'Player/AimMouse[/Mouse/position]'
+      m_Calls: []
+    m_ActionId: aa0dce7b-7e25-4852-ad64-4fd61da32e55
+    m_ActionName: 'Player/Push[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

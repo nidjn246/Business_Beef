@@ -21,7 +21,7 @@ public class TeamJoining : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             TeamManager.instance.AddTeamMember(teamName, collision.gameObject);
-
+            isThereBoss = collision.GetComponent<PlayerColors>().UpdateColor(isThereBoss);
 
         }
     }
@@ -31,6 +31,8 @@ public class TeamJoining : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             TeamManager.instance.RemoveTeamMember(teamName, collision.gameObject);
+            isThereBoss = collision.GetComponent<PlayerColors>().UpdateColor(isThereBoss);
+
         }
     }
 }
