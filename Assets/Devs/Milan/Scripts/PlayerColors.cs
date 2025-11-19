@@ -7,39 +7,43 @@ public class PlayerColors : MonoBehaviour
     [SerializeField] private List<GameObject> bossSkins;
     [SerializeField] private GameObject whiteSkin;
 
-    public void ChangeColor(string team, int boss)
+    public bool UpdateColor(bool alreadyBoss)
     {
-        switch (team)
+        if (TeamManager.instance.blueTeamMembers.Contains(gameObject))
         {
-            case "orange":
-                if (boss == 1)
-                {
-                    ResetSkins();
-                    bossSkins[1].gameObject.SetActive(true);
-                }
-                else
-                {
-                    ResetSkins();
-                    normalSkins[1].gameObject.SetActive(true);
-                }
-                break;
-            case "blue":
-                if (boss == 1)
-                {
-                    ResetSkins();
-                    bossSkins[0].gameObject.SetActive(true);
-                }
-                else
-                {
-                    ResetSkins();
-                    normalSkins[0].gameObject.SetActive(true);
-                }
-                break;
-            case "white":
-                ResetSkins();
-                whiteSkin.SetActive(true);
-                break;
+            ResetSkins();
+            if (alreadyBoss)
+            {
+                normalSkins[0].SetActive(true);
+                return false;
+            }
+            else
+            {
+                bossSkins[0].SetActive(true);
+                return true;
+            }
         }
+        else if (TeamManager.instance.orangeTeamMembers.Contains(gameObject))
+        {
+            ResetSkins();
+            if (alreadyBoss)
+            {
+                normalSkins[1].SetActive(true);
+                return false;
+            }
+            else
+            {
+                bossSkins[1].SetActive(true);
+                return true;
+            }
+        }
+        else
+        {
+            ResetSkins();
+            whiteSkin.SetActive(true);
+            return false;
+        }
+        return true;
     }
 
     private void ResetSkins()

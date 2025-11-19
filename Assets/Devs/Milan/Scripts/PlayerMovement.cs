@@ -20,6 +20,14 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector3(moveDirection, rb.linearVelocity.y, 0);
+        if (moveDirection < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 270, 0);
+        }
+        else if (moveDirection > 1)
+        {
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
