@@ -1,6 +1,3 @@
-using System.Collections;
-using UnityEditor.ShaderKeywordFilter;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

@@ -529,11 +529,15 @@ MonoBehaviour:
     m_ActionId: 1d3b36e8-39d3-4d79-8027-ae41e7663e50
     m_ActionName: 'Player/Aim[/Mouse/position]'
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0849370c-c9c2-43fe-a36a-a480c881ea70
+    m_ActionName: 'Player/AimMouse[/Mouse/position]'
+  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6438839814661461574}
-        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
-        m_MethodName: OnAimMouse
-        m_Mode: 0
+      - m_Target: {fileID: 9201284014438835433}
+        m_TargetAssemblyTypeName: Push, Assembly-CSharp
+        m_MethodName: OnPush
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -542,8 +546,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 0849370c-c9c2-43fe-a36a-a480c881ea70
-    m_ActionName: 'Player/AimMouse[/Mouse/position]'
+    m_ActionId: f3817328-3fff-4b14-ba66-4132d6138bd9
+    m_ActionName: 'Player/Push[/Keyboard/f,/XInputControllerWindows/rightShoulder]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

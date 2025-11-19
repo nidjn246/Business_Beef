@@ -1,5 +1,3 @@
-using System.Collections;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class AmbientSounds : MonoBehaviour
@@ -9,7 +7,5 @@ public class AmbientSounds : MonoBehaviour
     {
         GetComponent<AudioSource>().Play();
     }
-
-
 
 }
