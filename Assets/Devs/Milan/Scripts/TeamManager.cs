@@ -1,0 +1,67 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TeamManager : MonoBehaviour
+{
+    public static TeamManager instance;
+    [SerializeField] GameObject startCanvas;
+    public List<GameObject> blueTeamMembers;
+    public List<GameObject> orangeTeamMembers;
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (startCanvas == null) return;
+
+        if (blueTeamMembers.Count == 1 && orangeTeamMembers.Count == 1)
+        {
+            startCanvas.SetActive(true);
+        }
+        else if (blueTeamMembers.Count == 2 && orangeTeamMembers.Count == 2)
+        {
+            startCanvas.SetActive(true);
+        }
+        else
+        {
+            startCanvas.SetActive(false);
+        }
+    }
+
+    public void AddTeamMember(string team, GameObject player)
+    {
+        if (team == "blue")
+        {
+            blueTeamMembers.Add(player);
+        }
+        else if (team == "orange")
+        {
+            orangeTeamMembers.Add(player);
+        }
+    }
+
+    public void RemoveTeamMember(string team, GameObject player)
+    {
+        if (team == "blue")
+        {
+            blueTeamMembers.Remove(player);
+
+        }
+        else if (team == "orange")
+        {
+            orangeTeamMembers.Remove(player);
+        }
+    }
+
+
+}
