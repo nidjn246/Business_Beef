@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -13,10 +14,27 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = maxHealth;
-        respawnPoint = GameObject.FindWithTag("RespawnPoint");
-
+        ResetHealth();
     }
+
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Match")
+        {
+            respawnPoint = GameObject.FindWithTag("RespawnPoint");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private void Update()
     {
         DisplayHealth();
@@ -32,7 +50,7 @@ public class Health : MonoBehaviour
             Die();
         }
     }
-    
+
     // Function to Heal the player
     public void Heal(float healAmount)
     {
@@ -47,7 +65,9 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
+
         StartCoroutine(RespawnCooldown());
+
     }
 
     private void DisplayHealth()
@@ -65,17 +85,20 @@ public class Health : MonoBehaviour
     // Respawn functionality
     private void Respawn()
     {
-        if (respawnPoint == null)
-        {
-            Debug.LogWarning("Player Health: No Respawn Point Assigned!");
-        }
         gameObject.transform.position = respawnPoint.transform.position;
+        ResetHealth();
     }
 
     [ContextMenu("TakeDamage")]
     public void Damage10()
     {
         TakeDamage(50f);
+    }
+
+    // Sets currentHealth to Max
+    private void ResetHealth()
+    {
+        currentHealth = maxHealth;
     }
 
 }
