@@ -9,6 +9,7 @@ public class PlayerState : MonoBehaviour
         Running,
         Jumping,
         Hanging,
+        Dashing,
     }
 
     public playerState currentState;

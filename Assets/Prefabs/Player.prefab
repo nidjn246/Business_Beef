@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 1753673719667074704}
   - component: {fileID: 7747203758087701496}
   - component: {fileID: 6438839814661461574}
+  - component: {fileID: 4688506459759348508}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -548,6 +549,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f3817328-3fff-4b14-ba66-4132d6138bd9
     m_ActionName: 'Player/Push[/Keyboard/f,/XInputControllerWindows/rightShoulder]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4688506459759348508}
+        m_TargetAssemblyTypeName: Dash, Assembly-CSharp
+        m_MethodName: onDash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 710706d7-31f1-47a0-8556-4fb919b5b67a
+    m_ActionName: 'Player/Dash[/Keyboard/leftShift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -635,6 +652,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   isHolding: 0
+--- !u!114 &4688506459759348508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561417914032030203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd92169d4258d704796ffe3a92132db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dash
+  dashForce: 10
+  cooldownTimer: 2
+  cooldownTime: 2
 --- !u!1001 &4114896642614695255
 PrefabInstance:
   m_ObjectHideFlags: 0
