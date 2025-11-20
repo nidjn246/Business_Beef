@@ -32,7 +32,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _1st_ShadeMap:
-        m_Texture: {fileID: 2800000, guid: 88251b2d6ea0d9b4fb930cdeac1060bd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 88afdb2fe1a3a3d438bc2c0c4d7818bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _2nd_ShadeMap:
@@ -128,7 +128,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 88251b2d6ea0d9b4fb930cdeac1060bd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 88afdb2fe1a3a3d438bc2c0c4d7818bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -512,7 +512,7 @@ Material:
     - _utsVersionY: 11
     - _utsVersionZ: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 0.9622642, g: 0.69035745, b: 0.40245628, a: 1}
+    - _1st_ShadeColor: {r: 0.6581735, g: 0.63207537, b: 1, a: 1}
     - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
