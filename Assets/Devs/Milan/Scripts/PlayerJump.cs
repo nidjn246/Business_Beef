@@ -21,7 +21,6 @@ public class PlayerJump : MonoBehaviour
         if (grounded)
         {
             rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
-            playerStateScript.currentState = PlayerState.playerState.Jumping;
             grounded = false;
         }
     }
@@ -33,7 +32,6 @@ public class PlayerJump : MonoBehaviour
         Vector3 normal = contact.normal;
         if (Vector3.Dot(normal, Vector3.up) > 0.5f)
         {
-            playerStateScript.currentState = PlayerState.playerState.Idle;
             grounded = true;
         }
 
