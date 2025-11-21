@@ -8,7 +8,6 @@ public class AmountOfPlayersUI : MonoBehaviour
 
 
 
-    // Update is called once per frame
     void Update()
     {
         blue.text = TeamManager.instance.blueTeamMembers.Count + "/2";

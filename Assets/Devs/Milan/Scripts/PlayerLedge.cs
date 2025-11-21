@@ -47,7 +47,6 @@ public class PlayerLedge : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ledge"))
         {
-            playerStateScript.currentState = PlayerState.playerState.Hanging;
             GoHang(other);
         }
     }
@@ -61,10 +60,9 @@ public class PlayerLedge : MonoBehaviour
     }
     public void Hoist()
     {
-        if (playerStateScript.currentState != PlayerState.playerState.Hanging)
-            return;
+        if (playerStateScript.currentState != PlayerState.playerState.Hanging) return;
         StopHang();
         rb.AddForce(Vector3.up * hoistHeight, ForceMode.Impulse);
-        playerStateScript.currentState = PlayerState.playerState.Idle;
+
     }
 }

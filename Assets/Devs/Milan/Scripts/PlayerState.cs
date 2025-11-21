@@ -5,11 +5,9 @@ public class PlayerState : MonoBehaviour
 
     public enum playerState
     {
-        Idle,
-        Running,
-        Jumping,
+        InControl,
+        NoControl,
         Hanging,
-        Dashing,
     }
 
     public playerState currentState;

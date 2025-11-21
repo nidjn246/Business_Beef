@@ -19,10 +19,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerStateScript.currentState == PlayerState.playerState.Running || playerStateScript.currentState == PlayerState.playerState.Dashing) return;
-
-        rb.linearVelocity = new Vector3(moveDirection, rb.linearVelocity.y, 0);
-
+        if (playerStateScript.currentState == PlayerState.playerState.InControl)
+        {
+            rb.linearVelocity = new Vector3(moveDirection, rb.linearVelocity.y, 0);
+        }
 
         if (moveDirection < 0)
         {
@@ -32,8 +32,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 90, 0);
         }
-
-
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -42,10 +40,5 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = context.ReadValue<Vector2>().x;
         moveDirection *= speed;
 
-        if (playerStateScript.currentState == PlayerState.playerState.Hanging) return;
-        if (moveDirection != 0)
-        {
-            playerStateScript.currentState = PlayerState.playerState.Running;
-        }
     }
 }
