@@ -17,6 +17,7 @@ public class ThrowableProp : MonoBehaviour
 
         // Disarm after hitting anything
         armed = false;
+        Die();
     }
 
     public void OnGrab()
@@ -27,6 +28,11 @@ public class ThrowableProp : MonoBehaviour
             // Crate is inside inventory → unarmed
             armed = true;
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 
 }
