@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject respawnPoint;
     [SerializeField] private float respawnTimer = 5f;
 
+    private bool playerDied;
+
 
     private void Start()
     {
@@ -45,7 +47,7 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damageAmount;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !playerDied)
         {
             Die();
         }
@@ -65,9 +67,8 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
-
         StartCoroutine(RespawnCooldown());
-
+        playerDied = true;
     }
 
     private void DisplayHealth()
@@ -87,6 +88,7 @@ public class Health : MonoBehaviour
     {
         gameObject.transform.position = respawnPoint.transform.position;
         ResetHealth();
+        playerDied = false;
     }
 
     [ContextMenu("TakeDamage")]

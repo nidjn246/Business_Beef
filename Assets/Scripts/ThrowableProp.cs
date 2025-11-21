@@ -1,0 +1,32 @@
+﻿using UnityEngine;
+
+public class ThrowableProp : MonoBehaviour
+{
+    [SerializeField] private float damage = 20f;
+    [SerializeField] private bool armed = false;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!armed) return;
+
+        // Damage player
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+        }
+
+        // Disarm after hitting anything
+        armed = false;
+    }
+
+    public void OnGrab()
+    {
+        // First: check if the crate even has a parent
+        if (transform.parent != null && transform.parent.name == "Inventory")
+        {
+            // Crate is inside inventory → unarmed
+            armed = true;
+        }
+    }
+
+}

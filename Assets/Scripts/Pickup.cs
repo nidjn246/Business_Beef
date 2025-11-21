@@ -73,6 +73,8 @@ public class Pickup : MonoBehaviour
         prop.transform.parent = pickupPoint;
         prop.GetComponent<Rigidbody>().isKinematic = true;
         prop.GetComponent<Collider>().enabled = false;
+        heldObject.GetComponent<ThrowableProp>().OnGrab();
+        ResetCollisions();
     }
 
     private void DropProp()
@@ -109,6 +111,22 @@ public class Pickup : MonoBehaviour
 
         // Throw force
         heldRb.AddForce(aimDir * throwForce, ForceMode.Impulse);
+    }
+
+    public void ResetCollisions()
+    {
+        Collider myCollider = heldObject.GetComponent<Collider>();
+
+        foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            if (player == this.gameObject) continue; // skip myself
+
+            foreach (Collider col in player.GetComponentsInChildren<Collider>())
+            {
+                Physics.IgnoreCollision(myCollider, col, false);
+            }
+        }
+
     }
 
 
