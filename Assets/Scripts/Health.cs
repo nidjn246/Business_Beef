@@ -88,7 +88,7 @@ public class Health : MonoBehaviour
     {
         gameObject.transform.position = respawnPoint.transform.position;
         ResetHealth();
-        playerDied = true;
+        playerDied = false;
     }
 
     [ContextMenu("TakeDamage")]
