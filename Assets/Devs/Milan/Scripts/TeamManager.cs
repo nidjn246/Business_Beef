@@ -43,10 +43,12 @@ public class TeamManager : MonoBehaviour
         if (team == "blue")
         {
             blueTeamMembers.Add(player);
+            player.layer = 9;
         }
         else if (team == "orange")
         {
             orangeTeamMembers.Add(player);
+            player.layer = 10;
         }
     }
 

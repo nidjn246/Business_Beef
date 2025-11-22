@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    public float speed = 5f;
     private Rigidbody rb;
     private float moveDirection;
     private PlayerState playerStateScript;

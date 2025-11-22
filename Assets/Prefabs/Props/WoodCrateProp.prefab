@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.0320225
+      value: 6.185671
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.048369914
+      value: -1.6500006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.19529915
+      value: -1.712213
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -120,7 +120,7 @@ PrefabInstance:
       addedObject: {fileID: 2988835814124286748}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2970512804083873591}
+      addedObject: {fileID: 4606559689898877361}
   m_SourcePrefab: {fileID: 100100000, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
 --- !u!1 &5522682011024129601 stripped
 GameObject:
@@ -175,7 +175,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2970512804083873591
+--- !u!114 &4606559689898877361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,6 +184,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5522682011024129601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa15fe656d176d42aa9b139897273b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 64f1aa10c6e5feb45a8aa94107b57004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  damage: 25
+  deathParticles: {fileID: 2809300244683553565, guid: 539c5f486e0547d45811c93f6cbd5f8b, type: 3}

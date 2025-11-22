@@ -4,24 +4,47 @@ using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
+    [Header("Time")]
     [SerializeField] float TimeLeft;
     [SerializeField] float maxTime = 60f;
-    private TextMeshProUGUI timerText;
+    [Space]
+
+    [Header("References")]
+    [SerializeField] private TextMeshProUGUI timerText;
+    [Space]
+
+    [Header("Scene")]
+    [SerializeField] private string winsceneName;
+
     void Start()
     {
-        timerText = GetComponentInChildren<TextMeshProUGUI>();
         TimeLeft = maxTime;
     }
+
     void Update()
     {
-        timerText.text = "Time left: " + Mathf.Round(TimeLeft);
-        TimeLeft -= Time.deltaTime;
+        Timer();
 
         if (TimeLeft <= 0f)
         {
-            int index = SceneManager.GetActiveScene().buildIndex + 1;
-            SceneManager.LoadScene(index);
+            GameEnd();
         }
+    }
+
+    private void Timer()
+    {
+        TimeLeft -= Time.deltaTime;
+        TimeLeft = Mathf.Max(TimeLeft, 0f);
+
+        int minutes = Mathf.FloorToInt(TimeLeft / 60);
+        int seconds = Mathf.FloorToInt(TimeLeft % 60);
+
+        timerText.text = $"{minutes:00}:{seconds:00}";
+    }
+
+    private void GameEnd()
+    {
+        SceneManager.LoadScene(winsceneName);
     }
 
 }

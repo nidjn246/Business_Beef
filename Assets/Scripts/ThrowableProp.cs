@@ -3,7 +3,7 @@
 public class ThrowableProp : MonoBehaviour
 {
     [SerializeField] private float damage = 20f;
-    [SerializeField] private bool armed = false;
+    private bool armed = false;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -30,7 +30,7 @@ public class ThrowableProp : MonoBehaviour
         }
     }
 
-    private void Die()
+    virtual public void Die()
     {
         Destroy(gameObject);
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameScore : MonoBehaviour
 {
-    public static GameScore Instance { get; private set; }
+    public static GameScore instance;
 
     [Header("Team Score")]
     private float team1Score;

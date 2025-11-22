@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    private Pickup pickupScript;
+
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float currentHealth;
     [SerializeField] private Image healthbar;
@@ -22,6 +24,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        pickupScript = GetComponent<Pickup>();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -69,6 +72,8 @@ public class Health : MonoBehaviour
     {
         StartCoroutine(RespawnCooldown());
         playerDied = true;
+        PlayerActive(false);
+
     }
 
     private void DisplayHealth()
@@ -89,6 +94,8 @@ public class Health : MonoBehaviour
         gameObject.transform.position = respawnPoint.transform.position;
         ResetHealth();
         playerDied = false;
+
+        PlayerActive(true);
     }
 
     [ContextMenu("TakeDamage")]
@@ -101,6 +108,36 @@ public class Health : MonoBehaviour
     private void ResetHealth()
     {
         currentHealth = maxHealth;
+    }
+
+    private void PlayerActive(bool enabled)
+    {
+        if (enabled)
+        {
+            // Turns player visable
+            foreach (MeshRenderer mr in gameObject.GetComponentsInChildren<MeshRenderer>())
+            {
+                mr.enabled = true;
+            }
+
+            pickupScript.enabled = true;
+            gameObject.GetComponentInChildren<Canvas>().enabled = true;
+        }
+
+        if (!enabled)
+        {
+            // Turns player invisible
+            foreach (MeshRenderer mr in gameObject.GetComponentsInChildren<MeshRenderer>())
+            {
+                mr.enabled = false;
+            }
+
+
+            pickupScript.enabled = false;
+            gameObject.GetComponentInChildren<Canvas>().enabled = false;
+        }
+
+
     }
 
 }

@@ -14,7 +14,7 @@ public class Pickup : MonoBehaviour
 
     private void Update()
     {
-       
+
         if (gamepadDir.sqrMagnitude > 0.1f)
         {
             aimDir = new Vector3(gamepadDir.x, gamepadDir.y, 0).normalized;
@@ -44,7 +44,7 @@ public class Pickup : MonoBehaviour
     {
         if (!context.performed) return;
         gamepadDir = context.ReadValue<Vector2>().normalized;
-        
+
     }
 
     private void TryPickup()
@@ -73,7 +73,7 @@ public class Pickup : MonoBehaviour
         prop.transform.parent = pickupPoint;
         prop.GetComponent<Rigidbody>().isKinematic = true;
         prop.GetComponent<Collider>().enabled = false;
-        heldObject.GetComponent<ThrowableProp>().OnGrab();
+        heldObject.GetComponent<ThrowableProp>()?.OnGrab();
         ResetCollisions();
     }
 
