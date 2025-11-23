@@ -49,18 +49,44 @@ MonoBehaviour:
   - name: FOOTSTEPS
     sounds: []
   - name: PUSH
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: d897768dcc07e33428e898606ad3b39f, type: 3}
+    - {fileID: 8300000, guid: 547140db7d2131e468b967e271484cca, type: 3}
   - name: JUMP
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 547140db7d2131e468b967e271484cca, type: 3}
   - name: HIT
     sounds: []
   - name: COINDROP
     sounds: []
   - name: CRATEBREAK
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 7e5f78300f65ccd4fb854e219541eb92, type: 3}
   - name: METALPIPE
     sounds: []
   - name: GUNSHOT
+    sounds: []
+  - name: CASHREGISTER
+    sounds: []
+  - name: GRUNT
+    sounds: []
+  - name: TIMETICKING
+    sounds: []
+  - name: CATMEOW
+    sounds: []
+  - name: CATSCREAM
+    sounds: []
+  - name: BASEBALLBAT
+    sounds: []
+  - name: EXPLOSION
+    sounds: []
+  - name: PIANOBREAK
+    sounds: []
+  - name: TRAFFICCONE
+    sounds: []
+  - name: SEWERGRATE
+    sounds: []
+  - name: TOYGUN
     sounds: []
 --- !u!82 &884707927791765488
 AudioSource:

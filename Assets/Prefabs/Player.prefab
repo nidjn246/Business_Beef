@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d716227e920c67f4793c39ed23cbd43e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
-  jumpHeight: 20
+  jumpHeight: 30
 --- !u!114 &3182567938398424811
 MonoBehaviour:
   m_ObjectHideFlags: 0

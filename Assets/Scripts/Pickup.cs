@@ -111,6 +111,8 @@ public class Pickup : MonoBehaviour
 
         // Throw force
         heldRb.AddForce(aimDir * throwForce, ForceMode.Impulse);
+        heldRb.AddTorque(aimDir / throwForce, ForceMode.Impulse);
+        AudioManager.PlaySound(SoundType.PUSH);
     }
 
     public void ResetCollisions()

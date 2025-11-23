@@ -21,8 +21,11 @@ public class PlayerJump : MonoBehaviour
         if (grounded)
         {
             rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
+            AudioManager.PlaySound(SoundType.JUMP, true, 0.6f);
             grounded = false;
         }
+
+
     }
 
 

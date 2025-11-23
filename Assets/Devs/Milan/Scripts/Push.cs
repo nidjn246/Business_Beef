@@ -35,6 +35,7 @@ public class Push : MonoBehaviour
     public void OnPush()
     {
         StartCoroutine(Pushing());
+        AudioManager.PlaySound(SoundType.PUSH, true, 0.5f);
     }
 
     private IEnumerator Pushing()

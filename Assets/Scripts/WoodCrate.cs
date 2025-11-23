@@ -8,6 +8,7 @@ public class WoodCrate : ThrowableProp
     {
         SpawnParticles();
         base.Die();
+        AudioManager.PlaySound(SoundType.CRATEBREAK, true, 0.6f);
     }
 
     private void SpawnParticles()
