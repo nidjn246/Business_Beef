@@ -2873,6 +2873,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5568897404952524787, guid: f079fb94cd8d690428724e106d3aa0ef, type: 3}
+      propertyPath: soundList.Array.data[6].sounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568897404952524787, guid: f079fb94cd8d690428724e106d3aa0ef, type: 3}
+      propertyPath: 'soundList.Array.data[6].sounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d945b5ce95c56240b9b9bca3f7a6aaf, type: 3}
+    - target: {fileID: 5568897404952524787, guid: f079fb94cd8d690428724e106d3aa0ef, type: 3}
       propertyPath: 'soundList.Array.data[8].sounds.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: c1eac1257eadc1d44a37c5bdb09c80dc, type: 3}
