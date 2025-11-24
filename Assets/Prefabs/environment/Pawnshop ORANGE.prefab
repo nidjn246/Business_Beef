@@ -1134,7 +1134,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3eb50c93ef19f4e489a2fe247117e904, type: 2}
+  - {fileID: 2100000, guid: 0415b993bb0ea1246ab0f2f9d1cb9f6c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1345,7 +1345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3657899179612210052}
   m_Layer: 0
-  m_Name: Pawnshop
+  m_Name: Pawnshop ORANGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
