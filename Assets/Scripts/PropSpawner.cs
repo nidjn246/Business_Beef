@@ -26,7 +26,7 @@ public class PropSpawner : MonoBehaviour
 
     private void SpawnValuable()
     {
-        GameObject randomProp = valuables[Random.Range(0, props.Length)];
+        GameObject randomProp = valuables[Random.Range(0, valuables.Length)];
         Vector3 randomLocation = transform.position + new Vector3(Random.Range(-range / 2, range / 2), 0, 0);
 
         Instantiate(randomProp, randomLocation, Quaternion.identity);
