@@ -1059,9 +1059,17 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
+      propertyPath: props.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
       propertyPath: 'props.Array.data[0]'
       value: 
       objectReference: {fileID: 5522682011024129601, guid: e87fbddc9f9060048957ef7c8aeb2951, type: 3}
+    - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
+      propertyPath: 'props.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4360146653160223949, guid: 6586d2f8f8be65d4a815a57e9ab4baca, type: 3}
     - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
       propertyPath: valuables.Array.size
       value: 3
