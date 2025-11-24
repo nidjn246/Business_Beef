@@ -63,6 +63,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f79718026becac459411337d9ecfd35, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1375492843010028511}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f79718026becac459411337d9ecfd35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3250182064707953683}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f79718026becac459411337d9ecfd35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8679220026166996756}
   m_SourcePrefab: {fileID: 100100000, guid: 0f79718026becac459411337d9ecfd35, type: 3}
 --- !u!1 &4360146653160223949 stripped
 GameObject:
@@ -84,3 +90,51 @@ MonoBehaviour:
   damage: 20
   deathParticles: {fileID: 2809300244683553565, guid: f03b880a93f6c6f4c8bb9b63800a7e89, type: 3}
   stunTime: 2
+--- !u!54 &3250182064707953683
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360146653160223949}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 8
+  m_CollisionDetection: 0
+--- !u!65 &8679220026166996756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360146653160223949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3648409, y: 1.2510715, z: 0.096884504}
+  m_Center: {x: -0.13371135, y: 0.012912244, z: 0.0005351305}
