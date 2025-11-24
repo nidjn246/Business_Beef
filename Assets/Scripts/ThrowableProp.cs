@@ -5,7 +5,7 @@ public class ThrowableProp : MonoBehaviour
     [SerializeField] private float damage = 20f;
     private bool armed = false;
 
-    private void OnCollisionEnter(Collision collision)
+    virtual public void OnCollisionEnter(Collision collision)
     {
         if (!armed) return;
 
