@@ -1059,8 +1059,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
+      propertyPath: 'props.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5522682011024129601, guid: e87fbddc9f9060048957ef7c8aeb2951, type: 3}
+    - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
       propertyPath: valuables.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
       propertyPath: valuableSpawnCooldown
@@ -1073,7 +1077,11 @@ PrefabInstance:
     - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
       propertyPath: 'valuables.Array.data[1]'
       value: 
-      objectReference: {fileID: 3855607405892284030, guid: 9f6792cc6ed27544382634077d814b4e, type: 3}
+      objectReference: {fileID: 3815740346607519321, guid: 8633a30c74292c94bbc70a4e35763643, type: 3}
+    - target: {fileID: 8825986070499265718, guid: c20b0822a47eacc4e83e064d856cbb48, type: 3}
+      propertyPath: 'valuables.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1452945676144009066, guid: 64fa3598d9459e3458b7005b44b2e990, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

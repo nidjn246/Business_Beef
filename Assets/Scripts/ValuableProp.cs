@@ -5,13 +5,11 @@ public class ValuableProp : MonoBehaviour
     [SerializeField] private int value = 500;
     private bool isSlowing = false;
     private PlayerMovement pm;
+    [Range(1f, 3f)]
+    [SerializeField] private float slowdownMultiplier = 2f;
     private float originalSpeed;
     private GameObject player;
 
-    private void Awake()
-    {
-
-    }
     private void Update()
     {
         if (transform.parent != null && transform.parent.name == "Inventory")

@@ -6,7 +6,7 @@ public class GameTimer : MonoBehaviour
 {
     [Header("Time")]
     [SerializeField] float TimeLeft;
-    [SerializeField] float maxTime = 60f;
+    public float maxTime = 60f;
     [Space]
 
     [Header("References")]

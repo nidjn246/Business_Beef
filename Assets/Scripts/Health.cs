@@ -7,11 +7,11 @@ public class Health : MonoBehaviour
 {
     private Pickup pickupScript;
 
-    [SerializeField] private float maxHealth = 100f;
+    public float maxHealth = 100f;
     [SerializeField] private float currentHealth;
     [SerializeField] private Image healthbar;
     [SerializeField] private GameObject respawnPoint;
-    [SerializeField] private float respawnTimer = 5f;
+    public float respawnSpeed = 5f;
 
     private bool playerDied;
 
@@ -84,7 +84,7 @@ public class Health : MonoBehaviour
 
     public IEnumerator RespawnCooldown()
     {
-        yield return new WaitForSeconds(respawnTimer);
+        yield return new WaitForSeconds(respawnSpeed);
         Respawn();
     }
 
