@@ -8,7 +8,7 @@ public class Pickup : MonoBehaviour
     [SerializeField] private float throwForce = 5f;
     [SerializeField] private LayerMask layer;
     private GameObject heldObject;
-    [SerializeField] private bool isHolding = false;
+    public bool isHolding = false;
     private Vector2 gamepadDir;
     private Vector3 aimDir;
 
@@ -58,13 +58,29 @@ public class Pickup : MonoBehaviour
                 return;
             }
 
+            // Find closest collider
+            Collider closest = null;
+            float closestDist = Mathf.Infinity;
 
-            GameObject obj = hits[0].gameObject;
+            foreach (Collider c in hits)
+            {
+                float dist = Vector3.Distance(pickupPoint.position, c.transform.position);
+                if (dist < closestDist)
+                {
+                    closestDist = dist;
+                    closest = c;
+                }
+            }
+
+            if (closest == null) return;
+
+            GameObject obj = closest.gameObject;
             heldObject = obj;
 
             EquipProp(obj);
         }
     }
+
 
     private void EquipProp(GameObject prop)
     {
@@ -90,7 +106,7 @@ public class Pickup : MonoBehaviour
 
     private void ThrowProp()
     {
-        if (!isHolding) return;
+        if (!isHolding || heldObject == null) return;
 
         Rigidbody heldRb = heldObject.GetComponent<Rigidbody>();
         Collider heldCollider = heldObject.GetComponent<Collider>();

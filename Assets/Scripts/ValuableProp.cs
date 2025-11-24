@@ -28,7 +28,7 @@ public class ValuableProp : MonoBehaviour
         }
     }
 
-    private void SlowPlayer()
+    public void SlowPlayer()
     {
         pm = transform.parent.GetComponentInParent<PlayerMovement>();
         if (pm == null) return;
@@ -38,7 +38,7 @@ public class ValuableProp : MonoBehaviour
         isSlowing = true;
     }
 
-    private void RestoreSpeed()
+    public void RestoreSpeed()
     {
         if (pm != null)
         {

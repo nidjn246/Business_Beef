@@ -67,7 +67,8 @@ MonoBehaviour:
   - name: GUNSHOT
     sounds: []
   - name: CASHREGISTER
-    sounds: []
+    sounds:
+    - {fileID: 0}
   - name: GRUNT
     sounds: []
   - name: TIMETICKING

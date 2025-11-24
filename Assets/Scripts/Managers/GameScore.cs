@@ -6,8 +6,8 @@ public class GameScore : MonoBehaviour
     public static GameScore instance;
 
     [Header("Team Score")]
-    private float team1Score;
-    private float team2Score;
+    [SerializeField] private float team1Score;
+    [SerializeField] private float team2Score;
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI scoreText1;
@@ -15,6 +15,11 @@ public class GameScore : MonoBehaviour
     public enum TeamNumber
     {
         Team1, Team2
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 
     private void Update()
@@ -28,9 +33,11 @@ public class GameScore : MonoBehaviour
         {
             case TeamNumber.Team1:
                 team1Score += amount;
+                Debug.Log(amount.ToString() + teamNumber);
                 break;
             case TeamNumber.Team2:
                 team2Score += amount;
+                Debug.Log(amount.ToString() + teamNumber);
                 break;
         }
     }

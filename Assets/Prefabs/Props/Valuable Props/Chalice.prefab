@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da017fc8898181d45b594b1a65a2c347, type: 3}
+      propertyPath: m_TagString
+      value: Valuable
+      objectReference: {fileID: 0}
     - target: {fileID: 8251956371823382323, guid: da017fc8898181d45b594b1a65a2c347, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -85,10 +89,10 @@ PrefabInstance:
       addedObject: {fileID: 6701966360110408953}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da017fc8898181d45b594b1a65a2c347, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7520848486798314705}
+      addedObject: {fileID: -3540438234466242343}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da017fc8898181d45b594b1a65a2c347, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3540438234466242343}
+      addedObject: {fileID: 1389012103502215427}
   m_SourcePrefab: {fileID: 100100000, guid: da017fc8898181d45b594b1a65a2c347, type: 3}
 --- !u!1 &9076965156154965048 stripped
 GameObject:
@@ -122,8 +126,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7520848486798314705
-BoxCollider:
+--- !u!114 &-3540438234466242343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076965156154965048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8e41206717dca4fba42ece73adddb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ValuableProp
+  value: 500
+--- !u!135 &1389012103502215427
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -141,18 +158,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3540438234466242343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9076965156154965048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8e41206717dca4fba42ece73adddb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ValuableProp
-  value: 500
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0.22, z: 0}
