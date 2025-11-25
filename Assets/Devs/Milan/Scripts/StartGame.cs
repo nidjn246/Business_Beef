@@ -5,7 +5,6 @@ public class StartGame : MonoBehaviour
 {
     public void StartTheGame()
     {
-        int index = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene("Match");
     }
 }

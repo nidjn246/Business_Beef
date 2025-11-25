@@ -16,6 +16,10 @@ public class GameTimer : MonoBehaviour
     [Header("Scene")]
     [SerializeField] private string winsceneName;
 
+    private void Start()
+    {
+        SetTime();
+    }
 
     public void SetTime()
     {
@@ -26,7 +30,7 @@ public class GameTimer : MonoBehaviour
     {
         Timer();
 
-        if (TimeLeft <= 0f)
+        if (TimeLeft <= 0)
         {
             GameEnd();
         }
