@@ -188,4 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   damage: 25
+  lifetime: 30
+  expiringParticles: {fileID: 1831213046867627124, guid: f2ceacedb5f07bc40ad4e1071169373b, type: 3}
   deathParticles: {fileID: 2809300244683553565, guid: 539c5f486e0547d45811c93f6cbd5f8b, type: 3}
