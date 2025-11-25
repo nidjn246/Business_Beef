@@ -4,6 +4,31 @@ public class ThrowableProp : MonoBehaviour
 {
     [SerializeField] private float damage = 20f;
     private bool armed = false;
+    [SerializeField] private float lifetime = 30f;
+    [SerializeField] private GameObject expiringParticles;
+    private float timer = 0f;
+    private bool spawnedParticles = false;
+
+
+    private void Start()
+    {
+        Destroy(gameObject, lifetime);
+    }
+
+
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (!spawnedParticles && timer > lifetime - 5f)
+        {
+            GameObject particles = Instantiate(expiringParticles, transform.position, Quaternion.identity);
+            Destroy(particles, 5f);
+            spawnedParticles = true;
+        }
+    }
+
 
     virtual public void OnCollisionEnter(Collision collision)
     {

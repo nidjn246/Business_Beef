@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   damage: 20
+  expiringParticles: {fileID: 1831213046867627124, guid: f2ceacedb5f07bc40ad4e1071169373b, type: 3}
   deathParticles: {fileID: 2809300244683553565, guid: f03b880a93f6c6f4c8bb9b63800a7e89, type: 3}
   stunTime: 2
 --- !u!54 &3250182064707953683
