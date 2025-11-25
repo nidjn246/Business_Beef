@@ -1,18 +1,29 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SellZone : MonoBehaviour
 {
     [SerializeField] private bool selling;
     [SerializeField] private float currentTime = 0f;
     [SerializeField] private float timeToSell = 5f;
 
+    private Canvas ui;
+    [SerializeField] private Image progressBar;
+    [SerializeField] private GameObject sellParticles;
+
     private Coroutine sellingCoroutine;
+
+    private void Start()
+    {
+        ui = GetComponentInChildren<Canvas>();
+        ui.enabled = false;
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
         // Only start selling when the CapsuleCollider enters
         if (!collider.TryGetComponent<CapsuleCollider>(out _)) return;
+
 
         Transform inventory = collider.transform.Find("Inventory");
 
@@ -20,12 +31,15 @@ public class SellZone : MonoBehaviour
         {
             GameObject valuable = inventory.GetChild(0).gameObject;
 
-            if (sellingCoroutine == null)  // Prevent double coroutine
+            if (sellingCoroutine == null && valuable.CompareTag("Valuable"))  // Prevent double coroutine
             {
                 selling = true;
                 sellingCoroutine = StartCoroutine(StartSelling(valuable));
+                ui.enabled = true;
             }
         }
+
+        
     }
 
     private void OnTriggerExit(Collider collider)
@@ -35,10 +49,12 @@ public class SellZone : MonoBehaviour
 
         selling = false;
 
+
         if (sellingCoroutine != null)
         {
             StopCoroutine(sellingCoroutine);
             sellingCoroutine = null;
+            ui.enabled = false;
         }
 
         currentTime = 0f;
@@ -51,6 +67,14 @@ public class SellZone : MonoBehaviour
         while (selling)
         {
             currentTime += Time.deltaTime;
+            progressBar.fillAmount = currentTime / timeToSell;
+
+            if (valuable.transform.parent == null)
+            {
+                ui.enabled = false;
+                selling = false;
+                yield return null;
+            }
 
             if (currentTime >= timeToSell)
             {
@@ -59,8 +83,9 @@ public class SellZone : MonoBehaviour
                 valuable.transform.parent.parent.GetComponent<Pickup>().isHolding = false;
                 valuable.transform.parent = null;
                 selling = false;
+                Sell();
                 Destroy(valuable);
-                AudioManager.PlaySound(SoundType.CASHREGISTER, true, 0.5f);
+
                 break;
             }
 
@@ -69,5 +94,17 @@ public class SellZone : MonoBehaviour
 
         sellingCoroutine = null;
     }
+
+    private void Sell()
+    {
+        AudioManager.PlaySound(SoundType.CASHREGISTER, true, 0.5f);
+        ui.enabled = false;
+
+        GameObject particles = Instantiate(sellParticles, gameObject.transform.position, Quaternion.identity);
+        Destroy(particles, 5f);
+
+    }
+
+    
 
 }

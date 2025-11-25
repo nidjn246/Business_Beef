@@ -1345,7 +1345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3657899179612210052}
   m_Layer: 0
-  m_Name: Pawnshop ORANGE
+  m_Name: P.Pawnshop ORANGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
