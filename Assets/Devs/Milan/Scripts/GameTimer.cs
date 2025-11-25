@@ -16,7 +16,8 @@ public class GameTimer : MonoBehaviour
     [Header("Scene")]
     [SerializeField] private string winsceneName;
 
-    void Start()
+
+    public void SetTime()
     {
         TimeLeft = maxTime;
     }

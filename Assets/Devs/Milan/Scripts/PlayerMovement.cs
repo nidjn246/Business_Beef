@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-
         moveDirection = context.ReadValue<Vector2>().x;
         moveDirection *= speed;
 

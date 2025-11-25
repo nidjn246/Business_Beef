@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 6438839814661461574}
   - component: {fileID: 4688506459759348508}
   - component: {fileID: 2929888308883672944}
+  - component: {fileID: 2156852932800248219}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -772,6 +773,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 710706d7-31f1-47a0-8556-4fb919b5b67a
     m_ActionName: 'Player/Dash[/Keyboard/leftShift]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2156852932800248219}
+        m_TargetAssemblyTypeName: PlayerSettingsSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a87c0303-e902-482a-b01d-c1c861a2a033
+    m_ActionName: 'Player/Settings[/XInputControllerWindows/select]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -871,10 +888,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd92169d4258d704796ffe3a92132db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dash
-  dashForce: 1
-  dashTime: 1
-  dashTimer: 2
-  cooldownTimer: 2
+  dashForce: 1.99
+  dashTime: 0.12
+  dashTimer: 0
+  cooldownTimer: -0.016694415
   cooldownTime: 2
 --- !u!114 &2929888308883672944
 MonoBehaviour:
@@ -892,7 +909,19 @@ MonoBehaviour:
   currentHealth: 0
   healthbar: {fileID: 6104997070356395708}
   respawnPoint: {fileID: 0}
-  respawnTimer: 5
+  respawnSpeed: 5
+--- !u!114 &2156852932800248219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561417914032030203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68577a9fc4a00a14f9b442be3019b0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSettingsSwitch
 --- !u!1001 &4114896642614695255
 PrefabInstance:
   m_ObjectHideFlags: 0
