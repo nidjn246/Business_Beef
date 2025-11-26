@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private float stepHeight = 0.5f;
     public float speed = 5f;
     private Rigidbody rb;
     private float moveDirection;
@@ -38,6 +39,13 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = context.ReadValue<Vector2>().x;
         moveDirection *= speed;
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        Debug.Log(collision.GetContact(0).normal);
 
     }
 }

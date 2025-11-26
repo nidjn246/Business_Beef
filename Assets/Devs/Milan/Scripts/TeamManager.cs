@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TeamManager : MonoBehaviour
 {
     public static TeamManager instance;
     [SerializeField] GameObject startCanvas;
     public List<GameObject> blueTeamMembers;
+    [SerializeField] GameObject startButton;
     public List<GameObject> orangeTeamMembers;
     void Awake()
     {
@@ -24,13 +26,22 @@ public class TeamManager : MonoBehaviour
     {
         if (startCanvas == null) return;
 
+        if (Time.timeScale == 0)
+        {
+            startCanvas.SetActive(false);
+            return;
+        }
+
+
         if (blueTeamMembers.Count == 1 && orangeTeamMembers.Count == 1)
         {
             startCanvas.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(startButton);
         }
         else if (blueTeamMembers.Count == 2 && orangeTeamMembers.Count == 2)
         {
             startCanvas.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(startButton);
         }
         else
         {

@@ -1367,6 +1367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TeamManager
   startCanvas: {fileID: 691662487}
   blueTeamMembers: []
+  startButton: {fileID: 2106476894}
   orangeTeamMembers: []
 --- !u!4 &315923821
 Transform:
@@ -5528,10 +5529,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05273ab415a704145be5cfa2af25693f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadSettings
-  playerSpeed: 0
-  playerHealth: 0
-  gameTime: 0
-  propSpawnSpeed: 0
+  playerSpeed: 10
+  playerHealth: 100
+  gameTime: 60
+  propSpawnSpeed: 3
 --- !u!4 &1634629111
 Transform:
   m_ObjectHideFlags: 0
