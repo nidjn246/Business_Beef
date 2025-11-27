@@ -12,7 +12,7 @@ public class MetalPipe : ThrowableProp
     {
         SpawnParticles();
         base.Die();
-        AudioManager.PlaySound(SoundType.METALPIPE, true, 0.6f);
+        AudioManager.PlaySound(SoundType.METALPIPE, true, 0.3f);
     }
 
     public override void OnCollisionEnter(Collision collision)

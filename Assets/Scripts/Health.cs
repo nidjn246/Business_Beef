@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         currentHealth -= damageAmount;
-
+        AudioManager.PlaySound(SoundType.HIT, true);
         if (currentHealth <= 0 && !playerDied)
         {
             Die();

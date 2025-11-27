@@ -87,8 +87,6 @@ MonoBehaviour:
     sounds: []
   - name: SEWERGRATE
     sounds: []
-  - name: TOYGUN
-    sounds: []
 --- !u!82 &884707927791765488
 AudioSource:
   m_ObjectHideFlags: 0

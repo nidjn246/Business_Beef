@@ -21,8 +21,8 @@ public enum SoundType
     PIANOBREAK,
     TRAFFICCONE,
     SEWERGRATE,
-    TOYGUN,
-
+    CARHONK,
+    CARHIT,
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
