@@ -7166,7 +7166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadSettings
   playerSpeed: 10
   playerHealth: 100
-  gameTime: 60
+  gameTime: 180
   propSpawnSpeed: 3
 --- !u!4 &1634629111
 Transform:
