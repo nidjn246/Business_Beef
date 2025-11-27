@@ -15,11 +15,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float moveDirection;
     private PlayerState playerStateScript;
+    private Pickup pickup;
     void Awake()
     {
         playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
-
+        pickup = GetComponent<Pickup>();
 
     }
 
@@ -62,21 +63,12 @@ public class PlayerMovement : MonoBehaviour
                     animators[i].SetBool("IsMoving", true);
 
                 }
+                animators[i].SetBool("Carry", pickup.isHolding);
                 animators[i].SetFloat("Speed", speed / 30);
             }
         }
 
-        //Ray ray = new Ray(feet.transform.position, transform.forward);
-        //Debug.DrawRay(ray.origin, ray.direction * stepDistance, Color.red);
 
-        //if (Physics.Raycast(ray, out RaycastHit hit, 50, ~LayerMask.GetMask("Players")))
-        //{
-        //    if (hit.distance <= stepDistance)
-        //    {
-        //        transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up, Time.deltaTime * stepSpeed);
-        //    }
-
-        //}
 
 
 
@@ -107,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 normal = contact.normal;
         if (Vector3.Dot(normal, Vector3.up) > 0.5f) return;
 
-
+        float distance = Mathf.Abs((collision.transform.position.y + collision.transform.localScale.y / 2) - feet.transform.position.y) + 0.1f;
+        if (distance > stepDistance) return;
+        transform.position = new Vector3(transform.position.x, transform.position.y + distance, transform.position.z);
     }
 }
