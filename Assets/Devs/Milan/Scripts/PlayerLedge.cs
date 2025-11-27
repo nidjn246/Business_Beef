@@ -64,7 +64,7 @@ public class PlayerLedge : MonoBehaviour
     {
         if (playerStateScript.currentState != PlayerState.playerState.Hanging) return;
         StopHang();
-        rb.AddForce(Vector3.up * hoistHeight, ForceMode.Impulse);
+        rb.linearVelocity = (Vector3.up * hoistHeight);
 
     }
 }

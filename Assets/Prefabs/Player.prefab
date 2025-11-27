@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d716227e920c67f4793c39ed23cbd43e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
-  jumpHeight: 30
+  jumpHeight: 25
 --- !u!114 &3182567938398424811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,9 +532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132cf629320f0da4d9347d97d1d7d5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  stepHeight: 0.5
+  stepDistance: 0.5
+  animators: []
   speed: 10
   feet: {fileID: 0}
+  stepSpeed: 5
 --- !u!54 &497890370245305543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -912,6 +914,7 @@ MonoBehaviour:
   healthbar: {fileID: 6104997070356395708}
   respawnPoint: {fileID: 0}
   respawnSpeed: 5
+  deathParticles: {fileID: 317354707255549227, guid: 0704f3da5e1308149ae11ddea043acad, type: 3}
 --- !u!114 &2156852932800248219
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject respawnPoint;
     public float respawnSpeed = 5f;
 
+    [SerializeField] private GameObject deathParticles;
+
     private bool playerDied;
 
 
@@ -73,6 +75,7 @@ public class Health : MonoBehaviour
         StartCoroutine(RespawnCooldown());
         playerDied = true;
         PlayerActive(false);
+        SpawnParticles(deathParticles);
 
     }
 
@@ -138,6 +141,12 @@ public class Health : MonoBehaviour
         }
 
 
+    }
+
+    private void SpawnParticles(GameObject particles)
+    {
+       GameObject particle = Instantiate(particles, gameObject.transform.position, Quaternion.identity);
+       Destroy(particle, 5f);
     }
 
 }
