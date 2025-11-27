@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] private GameObject deathParticles;
 
-    private bool playerDied;
+    public bool playerDied { get; private set; }
 
 
     private void Start()
@@ -72,11 +72,10 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
+        SpawnParticles(deathParticles);
         StartCoroutine(RespawnCooldown());
         playerDied = true;
         PlayerActive(false);
-        SpawnParticles(deathParticles);
-
     }
 
     private void DisplayHealth()
@@ -115,6 +114,8 @@ public class Health : MonoBehaviour
 
     private void PlayerActive(bool enabled)
     {
+        Push push = transform.Find("PushRadius").GetComponent<Push>();
+
         if (enabled)
         {
             // Turns player visable
@@ -125,7 +126,8 @@ public class Health : MonoBehaviour
 
             pickupScript.enabled = true;
             gameObject.GetComponentInChildren<Canvas>().enabled = true;
-            GetComponent<PlayerMovement>().enabled = enabled;
+            GetComponent<PlayerMovement>().enabled = true;
+            push.enabled = true;
         }
 
         if (!enabled)
@@ -140,6 +142,7 @@ public class Health : MonoBehaviour
             pickupScript.enabled = false;
             gameObject.GetComponentInChildren<Canvas>().enabled = false;
             GetComponent<PlayerMovement>().enabled = false;
+            push.enabled = false;
         }
 
 
@@ -147,8 +150,8 @@ public class Health : MonoBehaviour
 
     private void SpawnParticles(GameObject particles)
     {
-       GameObject particle = Instantiate(particles, gameObject.transform.position, Quaternion.identity);
-       Destroy(particle, 5f);
+        GameObject particle = Instantiate(particles, gameObject.transform.position, Quaternion.identity);
+        Destroy(particle, 5f);
     }
 
 }

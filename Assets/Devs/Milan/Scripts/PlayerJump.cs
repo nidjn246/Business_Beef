@@ -7,15 +7,17 @@ public class PlayerJump : MonoBehaviour
     private bool grounded = true;
     [SerializeField] private float jumpHeight = 5f;
     private PlayerState playerStateScript;
+    private Health health;
     void Start()
     {
         playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
+        health = GetComponent<Health>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (!context.performed)
+        if (!context.performed || health.playerDied == true)
             return;
 
         if (grounded)
