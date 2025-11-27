@@ -532,7 +532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132cf629320f0da4d9347d97d1d7d5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  stepHeight: 0.5
   speed: 10
+  feet: {fileID: 0}
 --- !u!54 &497890370245305543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -836,8 +838,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.68764395, y: 1.8433342, z: 0.3118639}
-  m_Center: {x: -0.020532668, y: -0.0783329, z: -0.005175382}
+  m_Size: {x: 0.68764395, y: 1.7715342, z: 0.3118639}
+  m_Center: {x: -0.020532668, y: -0.042432904, z: -0.005175382}
 --- !u!114 &7747203758087701496
 MonoBehaviour:
   m_ObjectHideFlags: 0
