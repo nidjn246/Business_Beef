@@ -951,7 +951,7 @@ MonoBehaviour:
   healthbar: {fileID: 6104997070356395708}
   respawnPoint: {fileID: 0}
   respawnSpeed: 5
-  deathParticles: {fileID: 0}
+  deathParticles: {fileID: 317354707255549227, guid: 0704f3da5e1308149ae11ddea043acad, type: 3}
 --- !u!114 &2156852932800248219
 MonoBehaviour:
   m_ObjectHideFlags: 0
