@@ -8,6 +8,9 @@ TagManager:
   - Ledge
   - RespawnPoint
   - Valuable
+  - GlassShop
+  - Reclame
+  - PawnShop
   layers:
   - Default
   - TransparentFX

@@ -2,21 +2,32 @@ using UnityEngine;
 
 public class BecomeTransparent : MonoBehaviour
 {
-    public Shader toon;
-    [SerializeField] private Material objectsMaterial;
-    [Range(0f, 1f)]
-    [SerializeField] private float transparency;
+    public Material pawnShop;
+    public Material pawnShopTransparent;
 
-    private void Start()
-    {
-        toon = Shader.Find("Toon");
-    }
+    public Material reclame;
+    public Material reclameTransparent;
 
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
-            SetTransparency(0.3f); // lower value = more transparent
+            foreach (Transform child in transform)
+            {
+                if (child.CompareTag("PawnShop"))
+                {
+                    var mr = child.GetComponent<MeshRenderer>();
+                    if (mr != null)
+                        mr.material = pawnShopTransparent;
+                }
+
+                if (child.CompareTag("Reclame"))
+                {
+                    var mr = child.GetComponent<MeshRenderer>();
+                    if (mr != null)
+                        mr.material = reclameTransparent;
+                }
+            }
         }
     }
 
@@ -24,12 +35,22 @@ public class BecomeTransparent : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SetTransparency(1f); // back to normal
-        }
-    }
+            foreach (Transform child in transform)
+            {
+                if (child.CompareTag("PawnShop"))
+                {
+                    var mr = child.GetComponent<MeshRenderer>();
+                    if (mr != null)
+                        mr.material = pawnShop;
+                }
 
-    private void SetTransparency(float alpha)
-    {
-        objectsMaterial.shader = toon;
+                if (child.CompareTag("Reclame"))
+                {
+                    var mr = child.GetComponent<MeshRenderer>();
+                    if (mr != null)
+                        mr.material = reclame;
+                }
+            }
+        }
     }
 }

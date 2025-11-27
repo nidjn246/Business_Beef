@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float stepSpeed = 5f;
     private Rigidbody rb;
     private float moveDirection;
+    public float lastMoveDirection;
     private PlayerState playerStateScript;
     private Pickup pickup;
     void Awake()
@@ -35,10 +36,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveDirection < 0)
         {
+            lastMoveDirection = moveDirection;
             transform.rotation = Quaternion.Euler(0, 270, 0);
         }
         else if (moveDirection > 1)
         {
+            lastMoveDirection = moveDirection;
             transform.rotation = Quaternion.Euler(0, 90, 0);
         }
 
@@ -68,22 +71,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
 
 
     public void OnMove(InputAction.CallbackContext context)

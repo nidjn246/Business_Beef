@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class Pickup : MonoBehaviour
@@ -7,19 +8,54 @@ public class Pickup : MonoBehaviour
     [SerializeField] private float pickupRange = 25f;
     [SerializeField] private float throwForce = 5f;
     [SerializeField] private LayerMask layer;
+    [SerializeField] private float aimIndicatorOffset = 0.5f;
     private GameObject heldObject;
     public bool isHolding = false;
     private Vector2 gamepadDir;
     private Vector3 aimDir;
+    private GameObject aimObject; // UI arrow image for aiming
+    PlayerMovement pm;
+
+    private void Start()
+    {
+        aimObject = transform.Find("Aim").gameObject;
+        pm = GetComponent<PlayerMovement>();
+    }
 
     private void Update()
     {
-
-        if (gamepadDir.sqrMagnitude > 0.1f)
+        if (isHolding && heldObject != heldObject.gameObject.CompareTag("Valuable"))
         {
-            aimDir = new Vector3(gamepadDir.x, gamepadDir.y, 0).normalized;
+            if (gamepadDir.sqrMagnitude > 0.1f)
+            {
+                aimDir = new Vector3(gamepadDir.x, gamepadDir.y, 0).normalized;
+
+                if (pm.lastMoveDirection < 0f) // facing right
+                {
+                    aimObject.SetActive(true);
+                    aimObject.transform.localPosition = new Vector3(0, gamepadDir.y + 1, -gamepadDir.x);
+                }
+                else // facing left
+                {
+                    aimObject.SetActive(true);
+                    aimObject.transform.localPosition = new Vector3(0, gamepadDir.y + 1, gamepadDir.x);
+                }
+
+
+            }
+            else
+            {
+                aimObject.transform.localPosition = Vector3.zero;
+                aimObject.SetActive(false);
+            }
+        } else
+        {
+            aimObject.SetActive(false);
+            return;
         }
+        
     }
+
 
 
     public void OnPickup(InputAction.CallbackContext context)
@@ -147,8 +183,5 @@ public class Pickup : MonoBehaviour
         }
 
     }
-
-
-
 
 }
