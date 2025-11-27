@@ -510,7 +510,7 @@ Material:
     - _Tweak_RimLightMaskLevel: 0
     - _Tweak_ShadingGradeMapLevel: 0
     - _Tweak_SystemShadowsLevel: 0
-    - _Tweak_transparency: -0.6
+    - _Tweak_transparency: -0.9
     - _UVBase: 0
     - _UVDetail: 0
     - _UVEmissive: 0
