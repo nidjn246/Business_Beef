@@ -125,6 +125,7 @@ public class Health : MonoBehaviour
 
             pickupScript.enabled = true;
             gameObject.GetComponentInChildren<Canvas>().enabled = true;
+            GetComponent<PlayerMovement>().enabled = enabled;
         }
 
         if (!enabled)
@@ -138,6 +139,7 @@ public class Health : MonoBehaviour
 
             pickupScript.enabled = false;
             gameObject.GetComponentInChildren<Canvas>().enabled = false;
+            GetComponent<PlayerMovement>().enabled = false;
         }
 
 

@@ -101,12 +101,13 @@ public class Pickup : MonoBehaviour
             heldObject.transform.parent = null;
             heldObject.GetComponent<Rigidbody>().isKinematic = false;
             heldObject.GetComponent<Collider>().enabled = true;
+            heldObject.GetComponent<ThrowableProp>().armed = false;
         }
     }
 
     private void ThrowProp()
     {
-        if (!isHolding || heldObject == null) return;
+        if (!isHolding || heldObject == null || heldObject.gameObject.CompareTag("Valuable")) return;
 
         Rigidbody heldRb = heldObject.GetComponent<Rigidbody>();
         Collider heldCollider = heldObject.GetComponent<Collider>();

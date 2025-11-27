@@ -3,7 +3,7 @@
 public class ThrowableProp : MonoBehaviour
 {
     [SerializeField] private float damage = 20f;
-    private bool armed = false;
+    public bool armed = false;
     [SerializeField] private float lifetime = 30f;
     [SerializeField] private GameObject expiringParticles;
     private float timer = 0f;
