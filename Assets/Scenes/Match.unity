@@ -3494,7 +3494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646941455096450515, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 647423341622455754, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -3550,7 +3550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 996500318212707099, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 1371699751778774938, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -3574,7 +3574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2823558820712617838, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 2890987875345549895, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -3614,7 +3614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5468912376948673465, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 5622289327346215116, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -3634,7 +3634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6915873766306404025, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 7112386615147475398, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -3650,11 +3650,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7221255351793828178, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 7235718810373101179, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642631080446304111, guid: 34b69b157048d8746a41bc016a510232, type: 3}
+      propertyPath: m_TagString
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 7790154869710908283, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -3663,6 +3667,10 @@ PrefabInstance:
     - target: {fileID: 8685879089391799748, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977126600986234268, guid: 34b69b157048d8746a41bc016a510232, type: 3}
+      propertyPath: m_TagString
+      value: PawnShop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
