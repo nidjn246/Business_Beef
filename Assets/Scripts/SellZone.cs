@@ -6,6 +6,7 @@ public class SellZone : MonoBehaviour
     [SerializeField] private bool selling;
     [SerializeField] private float currentTime = 0f;
     [SerializeField] private float timeToSell = 5f;
+    public string team;
 
     private Canvas ui;
     [SerializeField] private Image progressBar;
