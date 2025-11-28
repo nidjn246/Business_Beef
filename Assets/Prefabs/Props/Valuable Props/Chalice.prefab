@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8555725603251594882}
     m_Modifications:
     - target: {fileID: 1103743492780525300, guid: e4fa8e01bfa6e0349ac8dcf996df9e69, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103743492780525300, guid: e4fa8e01bfa6e0349ac8dcf996df9e69, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1
       objectReference: {fileID: 0}

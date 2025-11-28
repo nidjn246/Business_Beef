@@ -41,14 +41,14 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7472341699849658609}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 2
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.53
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -987,30 +987,30 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.6689663
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.0783101
           value: 1
-          inSlope: -4.2294974
-          outSlope: -4.2294974
+          inSlope: 0.060119055
+          outSlope: 0.060119055
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.094943054
+          outWeight: 0.3567579
         - serializedVersion: 3
-          time: 0.40945452
+          time: 0.4995764
           value: 0
-          inSlope: -0.12018705
-          outSlope: -0.12018705
+          inSlope: -0.14786007
+          outSlope: -0.14786007
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.20752397
+          inWeight: 0.33333334
+          outWeight: 0.43440303
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0.12640794
+          outSlope: 0.12640794
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.2822927
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1309,7 +1309,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
