@@ -6,6 +6,7 @@ public class ThrowableProp : MonoBehaviour
     public bool armed = false;
     [SerializeField] private float lifetime = 30f;
     [SerializeField] private GameObject expiringParticles;
+    [SerializeField] private GameObject deathParticles;
     private float timer = 0f;
     private bool spawnedParticles = false;
 
@@ -55,8 +56,15 @@ public class ThrowableProp : MonoBehaviour
         }
     }
 
+    public void SpawnParticles()
+    {
+        GameObject particles = Instantiate(deathParticles, gameObject.transform.position, Quaternion.identity);
+        Destroy(particles, 5f);
+    }
+
     virtual public void Die()
     {
+        SpawnParticles();
         Destroy(gameObject);
     }
 

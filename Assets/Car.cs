@@ -42,6 +42,7 @@ public class Car : MonoBehaviour
             // Deal damage
             playerHealth.TakeDamage(damage);
             AudioManager.PlaySound(SoundType.CARHONK);
+            AudioManager.PlaySound(SoundType.TRAFFICCONE);
         }
     }
 

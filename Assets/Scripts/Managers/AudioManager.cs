@@ -23,6 +23,7 @@ public enum SoundType
     SEWERGRATE,
     CARHONK,
     CARHIT,
+    FLUTE,
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
