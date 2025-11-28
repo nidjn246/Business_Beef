@@ -105,7 +105,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.32, y: 5.42, z: 1.21}
-  m_LocalScale: {x: 4, y: 2, z: 6}
+  m_LocalScale: {x: 6.68, y: 3.5574, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1208938969649130567}
@@ -147,6 +147,7 @@ MonoBehaviour:
   selling: 0
   currentTime: 0
   timeToSell: 5
+  teamLayer: 9
   progressBar: {fileID: 605123433703578294}
   sellParticles: {fileID: 2809300244683553565, guid: cb244021f0449744d85342e6238ca049, type: 3}
 --- !u!23 &4619827608341306690
@@ -241,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 5}
+  m_AnchoredPosition: {x: 0, y: 1.98}
   m_SizeDelta: {x: 5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3012454640097500538

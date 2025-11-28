@@ -2218,6 +2218,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbad8813b4487bc49b3f480966838656, type: 3}
+--- !u!1001 &1079342268
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2356616850298545274, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_Name
+      value: SellZoneBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619827608341306690, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: faf8ae81945caa24db78eb32a5a8e8e0, type: 2}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0127945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877112135510736049, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: teamLayer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
 --- !u!1001 &1264818082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2943,25 +3008,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1208938969649130567, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 3.92
-      objectReference: {fileID: 0}
     - target: {fileID: 2356616850298545274, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
       propertyPath: m_Name
-      value: SellZone
+      value: SellZoneOrange
       objectReference: {fileID: 0}
-    - target: {fileID: 2611972519164724606, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4619827608341306690, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: faf8ae81945caa24db78eb32a5a8e8e0, type: 2}
     - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.19
+      value: 20.37
       objectReference: {fileID: 0}
     - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27000046
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 6216223043320871290, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2996,13 +3057,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6877112135510736049, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
-      propertyPath: progressBar
-      value: 
-      objectReference: {fileID: 1845498744}
-    - target: {fileID: 6877112135510736049, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
-      propertyPath: sellParticles
-      value: 
-      objectReference: {fileID: 2809300244683553565, guid: cb244021f0449744d85342e6238ca049, type: 3}
+      propertyPath: teamLayer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3536,17 +3593,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1845498744 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 605123433703578294, guid: 059361abf7ed35c40ada0ea63530dcd0, type: 3}
-  m_PrefabInstance: {fileID: 1638110325}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1921038658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4552,7 +4598,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 355535571789245632, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 646941455096450515, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -4560,15 +4606,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 647423341622455754, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 705114993859040897, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 724148590825396866, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 825444525361586542, guid: 34b69b157048d8746a41bc016a510232, type: 3}
+      propertyPath: m_TagString
+      value: Reclame
       objectReference: {fileID: 0}
     - target: {fileID: 877632159140382055, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4616,23 +4666,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1371699751778774938, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 1889608499118378340, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 2209517881200332794, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 2465897669412889417, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 2481952816686911861, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 2823558820712617838, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -4640,39 +4690,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2890987875345549895, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 3317858651988349187, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 3789982983579771645, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 4187544713577726858, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199411510930977096, guid: 34b69b157048d8746a41bc016a510232, type: 3}
+      propertyPath: m_TagString
+      value: Reclame
       objectReference: {fileID: 0}
     - target: {fileID: 4489477041328584672, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 4879071655724382221, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 4914918849589088630, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 5095718523429933958, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 5288754488974106178, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 5468912376948673465, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -4680,11 +4734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622289327346215116, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 5961907638337561493, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 6077388554970447450, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_Name
@@ -4692,7 +4746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6763368415137389548, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 6915873766306404025, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -4700,15 +4754,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7112386615147475398, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 7130650041689564912, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 7144682447315167029, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 7221255351793828178, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -4716,7 +4770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7235718810373101179, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 7642631080446304111, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
@@ -4724,15 +4778,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7790154869710908283, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 8685879089391799748, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: PawnShop
       objectReference: {fileID: 0}
     - target: {fileID: 8977126600986234268, guid: 34b69b157048d8746a41bc016a510232, type: 3}
       propertyPath: m_TagString
-      value: PawnShop
+      value: Reclame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4947,6 +5001,7 @@ SceneRoots:
   - {fileID: 145922999}
   - {fileID: 1921038658}
   - {fileID: 1638110325}
+  - {fileID: 1079342268}
   - {fileID: 3690802950741059830}
   - {fileID: 8347762932819252882}
   - {fileID: 552384298}

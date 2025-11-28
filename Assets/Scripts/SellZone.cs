@@ -6,7 +6,7 @@ public class SellZone : MonoBehaviour
     [SerializeField] private bool selling;
     [SerializeField] private float currentTime = 0f;
     [SerializeField] private float timeToSell = 5f;
-    public string team;
+    public int teamLayer;
 
     private Canvas ui;
     [SerializeField] private Image progressBar;
@@ -25,22 +25,23 @@ public class SellZone : MonoBehaviour
         // Only start selling when the CapsuleCollider enters
         if (!collider.TryGetComponent<CapsuleCollider>(out _)) return;
 
-
-        Transform inventory = collider.transform.Find("Inventory");
-
-        if (inventory != null && inventory.childCount > 0)
+        if (collider.gameObject.layer == teamLayer) // if player layer is the same as sellzone layer
         {
-            GameObject valuable = inventory.GetChild(0).gameObject;
+            Transform inventory = collider.transform.Find("Inventory");
 
-            if (sellingCoroutine == null && valuable.CompareTag("Valuable"))  // Prevent double coroutine
+            if (inventory != null && inventory.childCount > 0)
             {
-                selling = true;
-                sellingCoroutine = StartCoroutine(StartSelling(valuable));
-                ui.enabled = true;
+                GameObject valuable = inventory.GetChild(0).gameObject;
+
+                if (sellingCoroutine == null && valuable.CompareTag("Valuable"))  // Prevent double coroutine
+                {
+                    selling = true;
+                    sellingCoroutine = StartCoroutine(StartSelling(valuable));
+                    ui.enabled = true;
+                }
             }
         }
-
-        
+ 
     }
 
     private void OnTriggerExit(Collider collider)
@@ -48,17 +49,21 @@ public class SellZone : MonoBehaviour
         // Only stop selling when the CapsuleCollider exits
         if (!collider.TryGetComponent<CapsuleCollider>(out _)) return;
 
-        selling = false;
-
-
-        if (sellingCoroutine != null)
+        if (collider.gameObject.layer == teamLayer) // if player layer is the same as sellzone layer {
         {
-            StopCoroutine(sellingCoroutine);
-            sellingCoroutine = null;
-            ui.enabled = false;
-        }
+            selling = false;
 
-        currentTime = 0f;
+
+            if (sellingCoroutine != null)
+            {
+                StopCoroutine(sellingCoroutine);
+                sellingCoroutine = null;
+                ui.enabled = false;
+            }
+
+            currentTime = 0f;
+        }
+            
     }
 
     private IEnumerator StartSelling(GameObject valuable)
