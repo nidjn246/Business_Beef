@@ -52,6 +52,7 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damageAmount;
         AudioManager.PlaySound(SoundType.HIT, true);
+        pickupScript.DropProp();
         if (currentHealth <= 0 && !playerDied)
         {
             Die();

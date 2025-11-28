@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -9,8 +10,11 @@ public class Pickup : MonoBehaviour
     [SerializeField] private float throwForce = 5f;
     [SerializeField] private LayerMask layer;
     [SerializeField] private float aimIndicatorOffset = 0.5f;
+    [SerializeField] private float pickupCooldown = 0.5f;
+
     private GameObject heldObject;
     public bool isHolding = false;
+    private bool canPickup = true;
     private Vector2 gamepadDir;
     private Vector3 aimDir;
     private GameObject aimObject; // UI arrow image for aiming
@@ -85,7 +89,7 @@ public class Pickup : MonoBehaviour
 
     private void TryPickup()
     {
-        if (!isHolding)
+        if (!isHolding && canPickup)
         {
             Collider[] hits = Physics.OverlapSphere(pickupPoint.position, pickupRange, layer);
 
@@ -120,6 +124,7 @@ public class Pickup : MonoBehaviour
 
     private void EquipProp(GameObject prop)
     {
+        
         isHolding = true;
         prop.transform.position = pickupPoint.position;
         prop.transform.parent = pickupPoint;
@@ -129,7 +134,7 @@ public class Pickup : MonoBehaviour
         ResetCollisions();
     }
 
-    private void DropProp()
+    public void DropProp()
     {
         if (isHolding)
         {
@@ -144,6 +149,8 @@ public class Pickup : MonoBehaviour
     private void ThrowProp()
     {
         if (!isHolding || heldObject == null || heldObject.gameObject.CompareTag("Valuable")) return;
+
+        StartCoroutine(Cooldown(pickupCooldown));
 
         Rigidbody heldRb = heldObject.GetComponent<Rigidbody>();
         Collider heldCollider = heldObject.GetComponent<Collider>();
@@ -182,6 +189,13 @@ public class Pickup : MonoBehaviour
             }
         }
 
+    }
+
+    private IEnumerator Cooldown(float time)
+    {
+        canPickup = false;
+        yield return new WaitForSeconds(time);
+        canPickup = true;
     }
 
 }
