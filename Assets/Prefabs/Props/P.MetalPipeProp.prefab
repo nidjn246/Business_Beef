@@ -62,7 +62,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f79718026becac459411337d9ecfd35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 80278460646603074}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f79718026becac459411337d9ecfd35, type: 3}
       insertIndex: -1
@@ -74,6 +77,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8679220026166996756}
   m_SourcePrefab: {fileID: 100100000, guid: 0f79718026becac459411337d9ecfd35, type: 3}
+--- !u!4 &4019896885208247927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f79718026becac459411337d9ecfd35, type: 3}
+  m_PrefabInstance: {fileID: 3477680057843190172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4360146653160223949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f79718026becac459411337d9ecfd35, type: 3}
@@ -92,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   damage: 20
+  armed: 0
   lifetime: 30
   expiringParticles: {fileID: 1750617042935759702, guid: 8a68ee47f1ba1c942aab75a943339505, type: 3}
   deathParticles: {fileID: 2809300244683553565, guid: f03b880a93f6c6f4c8bb9b63800a7e89, type: 3}
@@ -144,3 +153,69 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3648409, y: 1.2510715, z: 0.096884504}
   m_Center: {x: -0.13371135, y: 0.012912244, z: 0.0005351305}
+--- !u!1001 &8635181234107383762
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4019896885208247927}
+    m_Modifications:
+    - target: {fileID: 1735908047641310199, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472341699849658609, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_Name
+      value: Throw particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.109999955
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+--- !u!4 &80278460646603074 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+  m_PrefabInstance: {fileID: 8635181234107383762}
+  m_PrefabAsset: {fileID: 0}

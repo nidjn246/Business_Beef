@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8f911d10d8c6ef64e9c8dfffbe8e96de, type: 2}
     - target: {fileID: 919132149155446097, guid: 68b4e5b95baa2924da0eca3a7b96b09f, type: 3}
       propertyPath: m_Name
-      value: HealingBag
+      value: P.HealingBag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
