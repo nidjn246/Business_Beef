@@ -51,6 +51,10 @@ public class TeamManager : MonoBehaviour
 
     public void AddTeamMember(string team, GameObject player)
     {
+        if (blueTeamMembers.Contains(player) || orangeTeamMembers.Contains(player))
+        {
+            return;
+        }
         if (team == "blue")
         {
             blueTeamMembers.Add(player);

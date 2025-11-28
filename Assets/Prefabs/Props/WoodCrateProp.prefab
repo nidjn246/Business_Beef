@@ -1,5 +1,75 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1987037041175208295
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5183452593878738171}
+    m_Modifications:
+    - target: {fileID: 1735908047641310199, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735908047641310199, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472341699849658609, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_Name
+      value: Throw particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+--- !u!4 &7879110117791688695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8560049047361177232, guid: 628c222c169188a48857f63f8a99a1e2, type: 3}
+  m_PrefabInstance: {fileID: 1987037041175208295}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4640374298492879632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,7 +180,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 7879110117791688695}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
       insertIndex: -1
@@ -122,6 +195,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4606559689898877361}
   m_SourcePrefab: {fileID: 100100000, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
+--- !u!4 &5183452593878738171 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
+  m_PrefabInstance: {fileID: 4640374298492879632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5522682011024129601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f710c3127a08b7c469a17f008b00703c, type: 3}
@@ -188,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   damage: 25
+  armed: 0
   lifetime: 30
   expiringParticles: {fileID: 1750617042935759702, guid: 8a68ee47f1ba1c942aab75a943339505, type: 3}
   deathParticles: {fileID: 2809300244683553565, guid: 539c5f486e0547d45811c93f6cbd5f8b, type: 3}
