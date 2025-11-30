@@ -15,11 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float moveDirection;
     public float lastMoveDirection;
-    private PlayerState playerStateScript;
     private Pickup pickup;
+    public bool isClimbingLadder;
     void Awake()
     {
-        playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
         pickup = GetComponent<Pickup>();
 
@@ -28,8 +27,14 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isClimbingLadder)
+        {
+            // Vertical movement only
+            rb.linearVelocity = new Vector3(0, moveDirection, 0);
+            return;  // prevent normal movement code from running
+        }
 
-        if (playerStateScript.currentState == PlayerState.playerState.InControl)
+        if (PlayerState.currentState == PlayerState.playerState.InControl)
         {
             rb.linearVelocity = new Vector3(moveDirection, rb.linearVelocity.y, 0);
         }
@@ -76,9 +81,21 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveDirection = context.ReadValue<Vector2>().x;
-        moveDirection *= speed;
+        Vector2 input = context.ReadValue<Vector2>();
 
+        if (PlayerState.currentState == PlayerState.playerState.OnLadder)
+        {
+            // Only vertical movement on ladder
+            moveDirection = input.y * speed;
+
+            // Disable rigidbody horizontal movement
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+        }
+        else
+        {
+            // Only horizontal movement on ground
+            moveDirection = input.x * speed;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -91,4 +108,6 @@ public class PlayerMovement : MonoBehaviour
         if (distance > stepDistance) return;
         transform.position = new Vector3(transform.position.x, transform.position.y + distance, transform.position.z);
     }
+
+
 }

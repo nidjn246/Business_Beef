@@ -7,10 +7,8 @@ public class PlayerLedge : MonoBehaviour
     [SerializeField] private bool goLerp = false;
     [SerializeField] private Vector3 target;
     [SerializeField] float lerpSpeed = 0.5f;
-    private PlayerState playerStateScript;
     void Awake()
     {
-        playerStateScript = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -30,7 +28,7 @@ public class PlayerLedge : MonoBehaviour
 
     void GoHang(Collider other)
     {
-        playerStateScript.currentState = PlayerState.playerState.Hanging;
+        PlayerState.currentState = PlayerState.playerState.Hanging;
         target = other.transform.position;
         rb.linearVelocity = Vector3.zero;
         rb.useGravity = false;
@@ -39,7 +37,7 @@ public class PlayerLedge : MonoBehaviour
 
     void StopHang()
     {
-        playerStateScript.currentState = PlayerState.playerState.InControl;
+        PlayerState.currentState = PlayerState.playerState.InControl;
         rb.useGravity = true;
         goLerp = false;
         target = Vector3.zero;
@@ -62,7 +60,7 @@ public class PlayerLedge : MonoBehaviour
     }
     public void Hoist()
     {
-        if (playerStateScript.currentState != PlayerState.playerState.Hanging) return;
+        if (PlayerState.currentState != PlayerState.playerState.Hanging) return;
         StopHang();
         rb.linearVelocity = (Vector3.up * hoistHeight);
 

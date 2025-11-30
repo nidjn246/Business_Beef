@@ -16,21 +16,21 @@ public class Ventilator : MonoBehaviour
             Debug.Log("Force added");
 
             // Set player to NoControl
-            ps.currentState = PlayerState.playerState.NoControl;
+            PlayerState.currentState = PlayerState.playerState.NoControl;
 
             Vector3 force = transform.up * (launchForce / 1.5f) + transform.forward * -launchForce;
 
             rb.linearVelocity = force;
 
             // Start coroutine to give back control after 1 second
-            StartCoroutine(ReturnControl(ps, noControlDuration));
+            StartCoroutine(ReturnControl(noControlDuration));
         }
     }
 
-    private IEnumerator ReturnControl(PlayerState ps, float delay)
+    private IEnumerator ReturnControl(float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        ps.currentState = PlayerState.playerState.InControl;
+        PlayerState.currentState = PlayerState.playerState.InControl;
     }
 }

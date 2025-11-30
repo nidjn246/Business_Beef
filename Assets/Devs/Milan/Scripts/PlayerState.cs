@@ -8,9 +8,10 @@ public class PlayerState : MonoBehaviour
         InControl,
         NoControl,
         Hanging,
+        OnLadder,
     }
 
-    public playerState currentState;
+    public static playerState currentState;
 
 
 

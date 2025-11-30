@@ -32,7 +32,7 @@ public class Dash : MonoBehaviour
     }
     private IEnumerator Dashing()
     {
-        state.currentState = PlayerState.playerState.NoControl;
+        PlayerState.currentState = PlayerState.playerState.NoControl;
 
         Vector3 start = transform.position;
         Vector3 target = start + transform.forward * dashForce;
@@ -52,7 +52,7 @@ public class Dash : MonoBehaviour
 
 
 
-        state.currentState = PlayerState.playerState.InControl;
+        PlayerState.currentState = PlayerState.playerState.InControl;
         yield break;
     }
 
