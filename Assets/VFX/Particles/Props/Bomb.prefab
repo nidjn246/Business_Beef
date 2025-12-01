@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 162030882152817112}
   - component: {fileID: 375959448055900164}
   m_Layer: 0
-  m_Name: PropExpiring 1
+  m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,9 +41,9 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750617042935759702}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 0.05
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4840,7 +4840,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c40c17081b3ea140bcbf52073c49f32, type: 2}
+  - {fileID: 2100000, guid: 59767ece8b82b71428c22ba7759795ed, type: 2}
   - {fileID: 2100000, guid: 58dedf1bfd0e0064a9cbff624b7701d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
