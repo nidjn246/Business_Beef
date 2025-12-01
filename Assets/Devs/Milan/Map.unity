@@ -725,6 +725,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
   TimeLeft: 0
   maxTime: 60
+  timerText: {fileID: 0}
+  winsceneName: 
 --- !u!114 &871269768
 MonoBehaviour:
   m_ObjectHideFlags: 0
