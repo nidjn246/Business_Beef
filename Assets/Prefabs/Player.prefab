@@ -643,7 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464f141d92beacb4b97379b9063be0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLedge
-  hoistHeight: 20
+  hoistHeight: 10
   goLerp: 0
   target: {x: 0, y: 0, z: 0}
   lerpSpeed: 0.1
@@ -982,9 +982,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2249749
-  m_Height: 1.0000002
+  m_Height: 0.85909057
   m_Direction: 1
-  m_Center: {x: 1.539943e-17, y: 0.108908415, z: -0.014541358}
+  m_Center: {x: 1.539943e-17, y: 0.03845358, z: -0.014541358}
 --- !u!65 &1753673719667074704
 BoxCollider:
   m_ObjectHideFlags: 0
