@@ -77,15 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 input = context.ReadValue<Vector2>();
 
-        if (PlayerState.currentState == PlayerState.playerState.OnLadder)
-        {
-            // Only vertical movement on ladder
-            moveDirection = input.y * speed;
-
-            // Disable rigidbody horizontal movement
-            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
-        }
-        else
+        if (PlayerState.currentState == PlayerState.playerState.InControl)
         {
             // Only horizontal movement on ground
             moveDirection = input.x * speed;
