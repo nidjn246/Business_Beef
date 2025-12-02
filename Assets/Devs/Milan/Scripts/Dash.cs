@@ -10,10 +10,10 @@ public class Dash : MonoBehaviour
     [SerializeField] private float dashTimer = 1f;
     [SerializeField] private float cooldownTimer = 2;
     [SerializeField] private float cooldownTime = 2;
-    private PlayerState state;
+    private PlayerState ps;
     private void Start()
     {
-        state = GetComponent<PlayerState>();
+        ps = GetComponent<PlayerState>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -32,7 +32,7 @@ public class Dash : MonoBehaviour
     }
     private IEnumerator Dashing()
     {
-        PlayerState.currentState = PlayerState.playerState.NoControl;
+        ps.currentState = PlayerState.playerState.NoControl;
 
         Vector3 start = transform.position;
         Vector3 target = start + transform.forward * dashForce;
@@ -52,7 +52,7 @@ public class Dash : MonoBehaviour
 
 
 
-        PlayerState.currentState = PlayerState.playerState.InControl;
+        ps.currentState = PlayerState.playerState.InControl;
         yield break;
     }
 

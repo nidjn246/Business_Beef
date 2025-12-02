@@ -5,6 +5,12 @@ public class Ventilator : MonoBehaviour
 {
     [SerializeField] private float launchForce = 20f;
     [SerializeField] private float noControlDuration = 1f;
+    private PlayerState ps;
+
+    private void Start()
+    {
+        ps = GetComponent<PlayerState>();
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -16,7 +22,7 @@ public class Ventilator : MonoBehaviour
             Debug.Log("Force added");
 
             // Set player to NoControl
-            PlayerState.currentState = PlayerState.playerState.NoControl;
+            ps.currentState = PlayerState.playerState.NoControl;
 
             Vector3 force = transform.up * (launchForce / 1.5f) + transform.forward * -launchForce;
 
@@ -31,6 +37,6 @@ public class Ventilator : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        PlayerState.currentState = PlayerState.playerState.InControl;
+        ps.currentState = PlayerState.playerState.InControl;
     }
 }
