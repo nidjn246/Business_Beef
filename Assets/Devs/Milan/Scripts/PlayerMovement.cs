@@ -16,9 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveDirection;
     public float lastMoveDirection;
     private Pickup pickup;
-    public bool isClimbingLadder;
-    private Ladder currentLadder;
-    [SerializeField] private Collider ladderCollider;
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,12 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isClimbingLadder)
-        {
-            // Vertical movement only
-            rb.linearVelocity = new Vector3(0, moveDirection, 0);
-            return;  // prevent normal movement code from running
-        }
 
         if (PlayerState.currentState == PlayerState.playerState.InControl)
         {
@@ -111,25 +103,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y + distance, transform.position.z);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Ladder"))
-            currentLadder = other.GetComponent<Ladder>();
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Ladder"))
-            currentLadder = null;
-    }
-
-    public void OnEnterLadder(InputAction.CallbackContext ctx)
-    {
-        if (currentLadder != null && ctx.performed)
-        {
-            currentLadder.EnterLadderState(transform);
-        }
-    }
+    
 
   
 
