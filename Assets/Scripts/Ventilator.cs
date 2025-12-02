@@ -5,12 +5,6 @@ public class Ventilator : MonoBehaviour
 {
     [SerializeField] private float launchForce = 20f;
     [SerializeField] private float noControlDuration = 1f;
-    private PlayerState ps;
-
-    private void Start()
-    {
-        ps = GetComponent<PlayerState>();
-    }
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -29,11 +23,11 @@ public class Ventilator : MonoBehaviour
             rb.linearVelocity = force;
 
             // Start coroutine to give back control after 1 second
-            StartCoroutine(ReturnControl(noControlDuration));
+            StartCoroutine(ReturnControl(noControlDuration, ps));
         }
     }
 
-    private IEnumerator ReturnControl(float delay)
+    private IEnumerator ReturnControl(float delay, PlayerState ps)
     {
         yield return new WaitForSeconds(delay);
 
