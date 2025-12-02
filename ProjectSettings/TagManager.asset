@@ -11,6 +11,7 @@ TagManager:
   - GlassShop
   - Reclame
   - PawnShop
+  - Ladder
   layers:
   - Default
   - TransparentFX

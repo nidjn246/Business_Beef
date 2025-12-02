@@ -111,7 +111,7 @@
                     "id": "ec350242-919a-4034-9e15-95bad15a5ed0",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -361,7 +361,7 @@
                 {
                     "name": "",
                     "id": "ec01fd84-1adb-47ba-bad0-b71980ba343c",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
