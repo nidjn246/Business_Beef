@@ -43,7 +43,7 @@ public class PlayerColors : MonoBehaviour
             whiteSkin.SetActive(true);
             return false;
         }
-        return true;
+
     }
 
     private void ResetSkins()
