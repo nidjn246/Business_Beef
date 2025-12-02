@@ -575,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7862559682858959058}
-  - component: {fileID: 3317712169176569280}
+  - component: {fileID: 909831933147269706}
   - component: {fileID: 5204867950769874262}
   - component: {fileID: 7280869803671956854}
   - component: {fileID: 3182567938398424811}
@@ -618,7 +618,7 @@ Transform:
   - {fileID: 2539820217419077182}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &3317712169176569280
+--- !u!114 &909831933147269706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -630,7 +630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff40ea7dc6099f4fa54836ffcfbc29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerState
-  currentState: 0
 --- !u!114 &5204867950769874262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +682,7 @@ MonoBehaviour:
   feet: {fileID: 5431359219146216095}
   stepSpeed: 10
   lastMoveDirection: 0
+  isClimbingLadder: 0
 --- !u!54 &497890370245305543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -939,6 +939,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a87c0303-e902-482a-b01d-c1c861a2a033
     m_ActionName: 'Player/Settings[/XInputControllerWindows/select]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec350242-919a-4034-9e15-95bad15a5ed0
+    m_ActionName: 'Player/EnterLadder[/Keyboard/leftShift,/XInputControllerWindows/dpad/up]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
