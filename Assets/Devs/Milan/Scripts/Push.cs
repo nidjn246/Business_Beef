@@ -6,6 +6,7 @@ public class Push : MonoBehaviour
 {
     [SerializeField] private float pushForce = 10f;
     [SerializeField] private List<GameObject> playersInRadius;
+    private Animator animator;
     public bool isPushed = false;
     private void OnTriggerEnter(Collider other)
     {
@@ -23,9 +24,13 @@ public class Push : MonoBehaviour
     }
 
 
-
+    private void Start()
+    {
+        animator = GetComponentInParent<Animator>();
+    }
     public void OnPush()
     {
+        animator.SetTrigger("Push");
         StartCoroutine(Pushing());
         AudioManager.PlaySound(SoundType.PUSH, true, 0.5f);
     }
