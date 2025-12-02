@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerLedge : MonoBehaviour
@@ -9,6 +9,8 @@ public class PlayerLedge : MonoBehaviour
     [SerializeField] private Vector3 target;
     [SerializeField] float lerpSpeed = 0.5f;
     private PlayerState ps;
+
+    [SerializeField] private List<Animator> animators;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,6 +33,10 @@ public class PlayerLedge : MonoBehaviour
 
     void GoHang(Collider other)
     {
+        for (int i = 0; i < animators.Count; i++)
+        {
+            animators[i].SetBool("Hanging", true);
+        }
         ps.currentState = PlayerState.playerState.Hanging;
         target = other.transform.position;
         rb.linearVelocity = Vector3.zero;
@@ -39,7 +45,12 @@ public class PlayerLedge : MonoBehaviour
     }
 
     void StopHang()
+
     {
+        for (int i = 0; i < animators.Count; i++)
+        {
+            animators[i].SetBool("Hanging", false);
+        }
         ps.currentState = PlayerState.playerState.InControl;
         rb.useGravity = true;
         goLerp = false;
