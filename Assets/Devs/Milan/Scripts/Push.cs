@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Push : MonoBehaviour
 {
     [SerializeField] private float pushForce = 10f;
     [SerializeField] private List<GameObject> playersInRadius;
+    [SerializeField] private List<Animator> animators;
     public bool isPushed = false;
     private void OnTriggerEnter(Collider other)
     {
@@ -24,8 +26,13 @@ public class Push : MonoBehaviour
 
 
 
-    public void OnPush()
+    public void OnPush(InputAction.CallbackContext context)
     {
+        if (context.canceled) return;
+        for (int i = 0; i < animators.Count; i++)
+        {
+            animators[i].SetTrigger("Push");
+        }
         StartCoroutine(Pushing());
         AudioManager.PlaySound(SoundType.PUSH, true, 0.5f);
     }
