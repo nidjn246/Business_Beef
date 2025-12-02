@@ -525,6 +525,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Push
   pushForce: 10
   playersInRadius: []
+  animators:
+  - {fileID: 2699508688430087153}
+  - {fileID: 7811167093372126821}
+  - {fileID: 3688018184047695488}
+  - {fileID: 8519891869457196042}
+  - {fileID: 586539668025715975}
   isPushed: 0
 --- !u!1 &7138082280913591127
 GameObject:
@@ -964,7 +970,7 @@ MonoBehaviour:
       - m_Target: {fileID: 9201284014438835433}
         m_TargetAssemblyTypeName: Push, Assembly-CSharp
         m_MethodName: OnPush
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
