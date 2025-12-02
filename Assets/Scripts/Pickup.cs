@@ -142,6 +142,7 @@ public class Pickup : MonoBehaviour
             heldObject.transform.parent = null;
             heldObject.GetComponent<Rigidbody>().isKinematic = false;
             heldObject.GetComponent<Collider>().enabled = true;
+            if (heldObject.CompareTag("Valuable")) return;
             heldObject.GetComponent<ThrowableProp>().armed = false;
         }
     }
