@@ -48,5 +48,16 @@ public class GameScore : MonoBehaviour
         scoreText2.text = team2Score.ToString("F0");
     }
 
+    public bool GetWinner()
+    {
+        if (team1Score < team2Score)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+
+    }
 
 }
