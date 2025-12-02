@@ -43,12 +43,12 @@ public class Push : MonoBehaviour
         {
             Rigidbody rb = player.GetComponent<Rigidbody>();
             PlayerState playerState = player.GetComponent<PlayerState>();
-            PlayerState.currentState = PlayerState.playerState.NoControl;
+            playerState.currentState = PlayerState.playerState.NoControl;
             rb.linearVelocity = Vector3.zero;
             rb.AddForce(transform.parent.forward * pushForce, ForceMode.Impulse);
             player.GetComponentInChildren<Push>().isPushed = true;
             yield return new WaitForSeconds(0.3f);
-            PlayerState.currentState = PlayerState.playerState.InControl;
+            playerState.currentState = PlayerState.playerState.InControl;
             yield break;
         }
     }

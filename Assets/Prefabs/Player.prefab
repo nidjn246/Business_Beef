@@ -705,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff40ea7dc6099f4fa54836ffcfbc29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerState
+  currentState: 0
 --- !u!114 &5204867950769874262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464f141d92beacb4b97379b9063be0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLedge
-  hoistHeight: 10
+  hoistHeight: 20
   goLerp: 0
   target: {x: 0, y: 0, z: 0}
   lerpSpeed: 0.1

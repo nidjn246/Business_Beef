@@ -14,6 +14,7 @@ public class Bomb : ThrowableProp
             playersInRange[i].GetComponent<Health>().TakeDamage(explosionDamage);
         }
         base.Die();
+        AudioManager.PlaySound(SoundType.EXPLOSION, true, 0.5f);
     }
 
     private void OnTriggerEnter(Collider other)
