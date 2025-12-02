@@ -1,3 +1,4 @@
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,7 +15,9 @@ public class GameTimer : MonoBehaviour
     [Space]
 
     [Header("Scene")]
-    [SerializeField] private string winsceneName;
+    [SerializeField] private string blueWonScene;
+    [SerializeField] private string orangeWonScene;
+    [SerializeField] GameScore GameScore;
 
     private void Start()
     {
@@ -49,7 +52,48 @@ public class GameTimer : MonoBehaviour
 
     private void GameEnd()
     {
-        SceneManager.LoadScene(winsceneName);
+        GameObject[] allPlayers = GameObject.FindGameObjectsWithTag("Player");
+
+        List<GameObject> blueList = new List<GameObject>();
+        List<GameObject> orangeList = new List<GameObject>();
+
+        foreach (GameObject player in allPlayers)
+        {
+            if (player.layer == LayerMask.NameToLayer("Blue"))
+            {
+                blueList.Add(player);
+            }
+            else if (player.layer == LayerMask.NameToLayer("Orange"))
+            {
+                orangeList.Add(player);
+            }
+        }
+
+        GameObject[] bluePlayers = blueList.ToArray();
+        GameObject[] orangePlayers = orangeList.ToArray();
+
+        bool blueWon = GameScore.GetWinner();
+
+        if (blueWon)
+        {
+            foreach (GameObject p in orangePlayers)
+            {
+                Destroy(p);
+            }
+
+            SceneManager.LoadScene(blueWonScene);
+        }
+        else
+        {
+            foreach (GameObject p in bluePlayers)
+            {
+                Destroy(p);
+            }
+
+            SceneManager.LoadScene(orangeWonScene);
+        }
     }
+
+
 
 }
