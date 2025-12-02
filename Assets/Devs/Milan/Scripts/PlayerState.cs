@@ -11,9 +11,5 @@ public class PlayerState : MonoBehaviour
         OnLadder,
     }
 
-    public static playerState currentState;
-
-
-
-
+    public playerState currentState;
 }

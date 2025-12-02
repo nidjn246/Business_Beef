@@ -34,7 +34,7 @@ public class Car : MonoBehaviour
             knockbackDir.z = 0f;
 
             // Apply knockback
-            PlayerState.currentState = PlayerState.playerState.NoControl;
+            ps.currentState = PlayerState.playerState.NoControl;
             playerRb.linearVelocity = knockbackDir;
             StartCoroutine(WaitForControl(ps));
             
@@ -55,6 +55,6 @@ public class Car : MonoBehaviour
     private IEnumerator WaitForControl(PlayerState ps)
     {
         yield return new WaitForSeconds(1.5f);
-        PlayerState.currentState = PlayerState.playerState.InControl;
+        ps.currentState = PlayerState.playerState.InControl;
     }
 }

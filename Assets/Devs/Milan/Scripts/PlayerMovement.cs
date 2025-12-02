@@ -16,11 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private float moveDirection;
     public float lastMoveDirection;
     private Pickup pickup;
+    private PlayerState ps;
     
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         pickup = GetComponent<Pickup>();
+        ps = GetComponent<PlayerState>();
 
     }
 
@@ -28,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (PlayerState.currentState == PlayerState.playerState.InControl)
+        if (ps.currentState == PlayerState.playerState.InControl)
         {
             rb.linearVelocity = new Vector3(moveDirection, rb.linearVelocity.y, 0);
         }
@@ -77,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 input = context.ReadValue<Vector2>();
 
-        if (PlayerState.currentState == PlayerState.playerState.InControl)
+        if (ps.currentState == PlayerState.playerState.InControl)
         {
             // Only horizontal movement on ground
             moveDirection = input.x * speed;
