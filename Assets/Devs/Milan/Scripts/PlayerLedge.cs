@@ -9,7 +9,7 @@ public class PlayerLedge : MonoBehaviour
     [SerializeField] private Vector3 target;
     [SerializeField] float lerpSpeed = 0.5f;
     private PlayerState ps;
-    
+
     [SerializeField] private List<Animator> animators;
     void Awake()
     {
@@ -37,7 +37,6 @@ public class PlayerLedge : MonoBehaviour
         {
             animators[i].SetBool("Hanging", true);
         }
-        PlayerState.currentState = PlayerState.playerState.Hanging;
         ps.currentState = PlayerState.playerState.Hanging;
         target = other.transform.position;
         rb.linearVelocity = Vector3.zero;
@@ -52,7 +51,6 @@ public class PlayerLedge : MonoBehaviour
         {
             animators[i].SetBool("Hanging", false);
         }
-        PlayerState.currentState = PlayerState.playerState.InControl;
         ps.currentState = PlayerState.playerState.InControl;
         rb.useGravity = true;
         goLerp = false;
