@@ -124,7 +124,8 @@ public class Pickup : MonoBehaviour
 
     private void EquipProp(GameObject prop)
     {
-        
+        if (!heldObject.CompareTag("Valuable") && heldObject.GetComponent<ThrowableProp>().armed) return;
+
         isHolding = true;
         prop.transform.position = pickupPoint.position;
         prop.transform.parent = pickupPoint;

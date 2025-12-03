@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   selling: 0
   currentTime: 0
-  timeToSell: 5
+  timeToSell: 3
   teamLayer: 9
   progressBar: {fileID: 605123433703578294}
   sellParticles: {fileID: 2809300244683553565, guid: cb244021f0449744d85342e6238ca049, type: 3}

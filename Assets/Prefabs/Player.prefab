@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 4688506459759348508}
   - component: {fileID: 2929888308883672944}
   - component: {fileID: 2156852932800248219}
+  - component: {fileID: 5741628261760861517}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1036,6 +1037,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ec350242-919a-4034-9e15-95bad15a5ed0
     m_ActionName: 'Player/EnterLadder[/Keyboard/leftShift,/DualSenseGamepadHID1/dpad/up]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5741628261760861517}
+        m_TargetAssemblyTypeName: EmoteSystem, Assembly-CSharp
+        m_MethodName: OnEmote1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b48aa559-bbcd-4ed2-b9c9-b83b15cc6962
+    m_ActionName: 'Player/Emote1[/Keyboard/1]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5741628261760861517}
+        m_TargetAssemblyTypeName: EmoteSystem, Assembly-CSharp
+        m_MethodName: OnEmote2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fbcb4aee-a888-48b4-863e-2a7b730f030a
+    m_ActionName: 'Player/Emote2[/Keyboard/2]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1172,6 +1205,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68577a9fc4a00a14f9b442be3019b0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSettingsSwitch
+--- !u!114 &5741628261760861517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561417914032030203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd611e470d717b44babd0ee8a90b8b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  particles:
+  - {fileID: 9088824302666358089, guid: cd3f770c9737c7143a98134780aaba1f, type: 3}
+  - {fileID: 270782642509079869, guid: f3c090c3687fe5146974023ca6c98d73, type: 3}
 --- !u!1 &9012213034873934979
 GameObject:
   m_ObjectHideFlags: 0
