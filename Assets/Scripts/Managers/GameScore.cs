@@ -50,7 +50,7 @@ public class GameScore : MonoBehaviour
 
     public bool GetWinner()
     {
-        if (team1Score < team2Score)
+        if (team1Score > team2Score)
         {
             return true;
         } else

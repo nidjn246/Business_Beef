@@ -83,7 +83,7 @@ public class GameTimer : MonoBehaviour
 
             SceneManager.LoadScene(blueWonScene);
         }
-        else
+        if (!blueWon)
         {
             foreach (GameObject p in bluePlayers)
             {
