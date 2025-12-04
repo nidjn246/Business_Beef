@@ -28,37 +28,39 @@ public class Pickup : MonoBehaviour
 
     private void Update()
     {
-        if (isHolding && heldObject != heldObject.gameObject.CompareTag("Valuable"))
+        if (isHolding && !heldObject.CompareTag("Valuable"))
         {
             if (gamepadDir.sqrMagnitude > 0.1f)
             {
                 aimDir = new Vector3(gamepadDir.x, gamepadDir.y, 0).normalized;
 
+                // Rotate aimObject to aimDir (2D rotation)
+                float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
+                aimObject.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+                aimObject.SetActive(true);
+
                 if (pm.lastMoveDirection < 0f) // facing right
                 {
-                    aimObject.SetActive(true);
                     aimObject.transform.localPosition = new Vector3(0, gamepadDir.y + 1, -gamepadDir.x);
                 }
                 else // facing left
                 {
-                    aimObject.SetActive(true);
                     aimObject.transform.localPosition = new Vector3(0, gamepadDir.y + 1, gamepadDir.x);
                 }
-
-
             }
             else
             {
                 aimObject.transform.localPosition = Vector3.zero;
                 aimObject.SetActive(false);
             }
-        } else
+        }
+        else
         {
             aimObject.SetActive(false);
-            return;
         }
-        
     }
+
 
 
 
