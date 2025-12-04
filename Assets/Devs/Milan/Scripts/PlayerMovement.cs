@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float lastMoveDirection;
     private Pickup pickup;
     private PlayerState ps;
-    
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -56,20 +56,19 @@ public class PlayerMovement : MonoBehaviour
     {
         for (int i = 0; i < animators.Count; i++)
         {
-            if (animators[i].gameObject.activeSelf)
-            {
-                if (moveDirection == 0)
-                {
-                    animators[i].SetBool("IsMoving", false);
-                }
-                else
-                {
-                    animators[i].SetBool("IsMoving", true);
 
-                }
-                animators[i].SetBool("Carry", pickup.isHolding);
-                animators[i].SetFloat("Speed", speed / 30);
+            if (moveDirection == 0)
+            {
+                animators[i].SetBool("IsMoving", false);
             }
+            else
+            {
+                animators[i].SetBool("IsMoving", true);
+
+            }
+            animators[i].SetBool("Carry", pickup.isHolding);
+            animators[i].SetFloat("Speed", speed / 30);
+
         }
 
     }
@@ -91,14 +90,17 @@ public class PlayerMovement : MonoBehaviour
         ContactPoint contact = collision.contacts[0];
         Vector3 normal = contact.normal;
         if (Vector3.Dot(normal, Vector3.up) > 0.5f) return;
-
+        for (int i = 0; i < animators.Count; i++)
+        {
+            animators[i].SetTrigger("Land");
+        }
         float distance = Mathf.Abs((collision.transform.position.y + collision.transform.localScale.y / 2) - feet.transform.position.y) + 0.1f;
         if (distance > stepDistance) return;
         transform.position = new Vector3(transform.position.x, transform.position.y + distance, transform.position.z);
     }
 
-    
 
-  
+
+
 
 }

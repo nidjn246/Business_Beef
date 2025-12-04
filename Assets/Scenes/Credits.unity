@@ -167,10 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -603,8 +603,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1463279242}
-        m_TargetAssemblyTypeName: WinScreen, Assembly-CSharp
-        m_MethodName: MainMenu
+        m_TargetAssemblyTypeName: Credits, Assembly-CSharp
+        m_MethodName: CloseCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 1463279241}
   - component: {fileID: 1463279242}
   m_Layer: 0
-  m_Name: CreditsHandler ?
+  m_Name: CreditsHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -655,9 +655,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1463279240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b067ec886ff5644488bb2d94bfe7bf53, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e08e461669b966439cdaa35e51b8e1f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WinScreen
+  m_EditorClassIdentifier: Assembly-CSharp::Credits
 --- !u!1 &1622814380
 GameObject:
   m_ObjectHideFlags: 0

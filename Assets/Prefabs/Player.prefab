@@ -742,6 +742,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
   jumpHeight: 30
+  animators:
+  - {fileID: 2699508688430087153}
+  - {fileID: 7811167093372126821}
+  - {fileID: 3688018184047695488}
+  - {fileID: 8519891869457196042}
+  - {fileID: 586539668025715975}
 --- !u!114 &3182567938398424811
 MonoBehaviour:
   m_ObjectHideFlags: 0
